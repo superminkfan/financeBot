@@ -33,8 +33,56 @@ public class HeapWork {
         }
     }
 
+    public static ArrayList getDayStatSpans(Long chatId) {
+        ArrayList arrayList = new ArrayList();
 
-    public static HashMap getStat(Long chatId , int service)
+        Calendar time = Calendar.getInstance();
+        time.add(Calendar.MILLISECOND, -time.getTimeZone().getOffset(time.getTimeInMillis()));
+        Date now = time.getTime();
+
+        Date yesterday = Date.from(now.toInstant().minusSeconds(86400));
+        log.info("Executing select statmt for getDayStatSpans for users table...");
+
+        try {
+            Conn.connect();
+            ResultSet resSet = null;
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM heap WHERE chatId = " + chatId + " AND service =  1;");
+
+
+            if (resSet.isClosed()) {
+                log.warn("result set is empty, thats odd");
+                arrayList.add("none");
+                //return hashMap;
+            } else {
+
+
+                while (resSet.next()) {
+                    String string = resSet.getString("date");
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//задаю формат даты
+                    Date date = formatter.parse(string);//создаю дату через
+
+                    if (!yesterday.after(date) && !now.before(date)) {//все записи за день
+                        float temp = resSet.getFloat("amount");
+                        String nameCat = resSet.getString("nameCat");
+                        arrayList.add("" + nameCat + "---" + temp);
+
+                    }
+                }
+
+
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+
+        public static HashMap getStat(Long chatId , int service)
     {
 
         HashMap hashMap = new HashMap();
@@ -58,33 +106,37 @@ public class HeapWork {
 
             if (resSet.isClosed()) {
                 log.warn("result set is empty, thats odd");
-                return null;
+                hashMap.put("sumDay",Float.valueOf(0));
+                hashMap.put("nameCatDay","");
+                hashMap.put("maxDayAmount",Float.valueOf(0));
+                //return hashMap;
             }
 
-            float sum = 0;
-            float max = 0;
-            String nameCatMax = "";
+            else {
 
-            while (resSet.next()) {
-                String string = resSet.getString("date");
-                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//задаю формат даты
-                Date date = formatter.parse(string);//создаю дату через
 
-                if (!yesterday.after(date) && !now.before(date)) {//все записи за день
-                    float temp = resSet.getFloat("amount");
-                    if (max <= temp)
-                    {
-                        max = temp;
-                        nameCatMax = resSet.getString("nameCat");
+                float sum = 0;
+                float max = 0;
+                String nameCatMax = "";
+
+                while (resSet.next()) {
+                    String string = resSet.getString("date");
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//задаю формат даты
+                    Date date = formatter.parse(string);//создаю дату через
+
+                    if (!yesterday.after(date) && !now.before(date)) {//все записи за день
+                        float temp = resSet.getFloat("amount");
+                        if (max <= temp) {
+                            max = temp;
+                            nameCatMax = resSet.getString("nameCat");
+                        }
+                        sum = sum + temp;
                     }
-                    sum = sum + temp;
                 }
+                hashMap.put("sumDay", sum);
+                hashMap.put("nameCatDay", nameCatMax);
+                hashMap.put("maxDayAmount", max);
             }
-            hashMap.put("sumDay",sum);
-            hashMap.put("nameCatDay",nameCatMax);
-            hashMap.put("maxDayAmount",max);
-
-
 
 
 
@@ -95,32 +147,35 @@ public class HeapWork {
 
             if (resSet1.isClosed()) {
                 log.warn("result set is empty, thats odd");
-                return null;
+                hashMap.put("sumMounth", Float.valueOf(0));
+                hashMap.put("nameCatMounth", "");
+                hashMap.put("maxMounthAmount", Float.valueOf(0));
             }
 
-            float sum1 = 0;
-            float max1 = 0;
-            String nameCatMax1 = "";
+            else {
+                float sum1 = 0;
+                float max1 = 0;
+                String nameCatMax1 = "";
 
-            while (resSet1.next()) {
-                String string = resSet1.getString("date");
-                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//задаю формат даты
-                Date date = formatter.parse(string);//создаю дату через
+                while (resSet1.next()) {
+                    String string = resSet1.getString("date");
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//задаю формат даты
+                    Date date = formatter.parse(string);//создаю дату через
 
-                if (!mounthAgo.after(date) && !now.before(date)) {//все записи за день
-                    float temp = resSet1.getFloat("amount");
-                    if (max1 <= temp)
-                    {
-                        max1 = temp;
-                        nameCatMax1 = resSet1.getString("nameCat");
+                    if (!mounthAgo.after(date) && !now.before(date)) {//все записи за день
+                        float temp = resSet1.getFloat("amount");
+                        if (max1 <= temp) {
+                            max1 = temp;
+                            nameCatMax1 = resSet1.getString("nameCat");
+                        }
+                        sum1 = sum1 + temp;
                     }
-                    sum1 = sum1 + temp;
                 }
-            }
-            hashMap.put("sumMounth",sum1);
-            hashMap.put("nameCatMounth",nameCatMax1);
-            hashMap.put("maxMounthAmount",max1);
+                hashMap.put("sumMounth", sum1);
+                hashMap.put("nameCatMounth", nameCatMax1);
+                hashMap.put("maxMounthAmount", max1);
 
+            }
 
             Conn.CloseDB();
         } catch (SQLException e) {

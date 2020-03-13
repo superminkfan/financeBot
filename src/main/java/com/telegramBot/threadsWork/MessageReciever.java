@@ -26,8 +26,8 @@ public class MessageReciever implements Runnable {
     private final int WAIT_FOR_NEW_MESSAGE_DELAY = 1000;
     private final String END_LINE = "\n";
 
-    private String kostyl1;
-    private float kostyl2;
+    private String kostyl1="";
+    private float kostyl2=0;
     private int kostylDay = 0;
     private int kostylMounth = 0;
     private int kostylYear = 0;
@@ -76,37 +76,32 @@ public class MessageReciever implements Runnable {
 
                     if (RegEx.checkWithRegExp(inputText))
                     {
-                        SendMessage sendMessage = new SendMessage();
-                        sendMessage.setChatId(chatId);
-                        sendMessage.setText("я ввел твою хуйню в свою хуйню \n верь мне \n 8======3 ---+-++-+-+-+членоЛазер ");
-                        bot.sendQueue.add(sendMessage);
-
 
                         HashMap hashMap = RegEx.delimNaPopalam(inputText);
                         String action = (String) hashMap.get("action");
                         action = action.replaceAll(" " , "");
                         float amount = (Float) hashMap.get("amount");
-                       // System.out.println("то шо ввёл пользователь _"  + action + "_  " + amount);
+                        System.out.println("то шо ввёл пользователь _"  + action + "_  " + amount);
                         try {
-                            SendMessage s = new SendMessage();
-                            s.setChatId(chatId);
-                            s.setText("\uD83E\uDD91 кракен атакует ");
-                            bot.sendQueue.add(s);
 
                             if (InCat.searchInCat(chatId,action))
                             {
                                 HeapWork.addNewRow(chatId,amount,0 , action);
+
+                                SendMessage sendMessage2 = Bot.doSendMsg(chatId,"newHeapRow");
+                                Buttons.setButtonsMain(sendMessage2, chatId);
+                                bot.sendQueue.add(sendMessage2);
                             }
                             else if (OutCat.searchOutCat(chatId, action))
                             {
                                 HeapWork.addNewRow(chatId,amount,1 , action);
+
+                                SendMessage sendMessage2 = Bot.doSendMsg(chatId,"newHeapRow");
+                                Buttons.setButtonsMain(sendMessage2, chatId);
+                                bot.sendQueue.add(sendMessage2);
                             }
                             else
                             {
-                                SendMessage sendMessage1 = new SendMessage();
-                                sendMessage1.setChatId(chatId);
-                                sendMessage1.setText("ответный агонь из членоПушки!\n \uD83D\uDC4C 0%E<<<========8");
-                                bot.sendQueue.add(sendMessage1);
                                 kostyl1 = action;
                                 kostyl2 = amount;
                                 SendMessage sendMessage2 = Bot.doSendMsg(chatId,"newCat");
@@ -137,6 +132,9 @@ public class MessageReciever implements Runnable {
                             float lim = (float)hashMap.get("amount");
                             User.setMasterLim(chatId,master,lim);
 
+                            SendMessage sendMessage = Bot.doSendMsg(chatId,"budgetOk");
+                            Buttons.setButtonsMain(sendMessage , chatId);
+                            bot.sendQueue.add(sendMessage);
                         }
 
 
@@ -217,6 +215,19 @@ public class MessageReciever implements Runnable {
                     ChooseLanguage chooseLanguage = new ChooseLanguage(bot);
                     chooseLanguage.operate(chatId,update);
                 }
+                else if (calBack.equals("dayShow"))
+                {
+                    DayHandler dayHandler = new DayHandler(bot);
+                    dayHandler.operate(chatId,update);
+                }
+                else if (calBack.equals("monthShow"))
+                {
+
+                }
+                else if (calBack.equals("yearShow"))
+                {
+
+                }
                 else if (calBack.equals("changeDayLim"))
                 {
                     ChangeMasterLimitHandler wat = new ChangeMasterLimitHandler(bot);
@@ -256,9 +267,7 @@ public class MessageReciever implements Runnable {
                     /**
                      * показать все категории дохода
                      */
-                    SendMessage sendMessage = new SendMessage();
-                    sendMessage.setChatId(chatId);
-                    sendMessage.setText("Вот эти ребята ");
+                    SendMessage sendMessage = Bot.doSendMsg(chatId,"listCat");
                     bot.sendQueue.add(sendMessage);
                     ArrayList list = new ArrayList();
                     try {
@@ -283,9 +292,7 @@ public class MessageReciever implements Runnable {
                     /**
                      * показать все категоии разхода
                      */
-                    SendMessage sendMessage = new SendMessage();
-                    sendMessage.setChatId(chatId);
-                    sendMessage.setText("Вот эти ребята ");
+                    SendMessage sendMessage = Bot.doSendMsg(chatId,"listCat");
                     bot.sendQueue.add(sendMessage);
                     ArrayList list = new ArrayList();
                     try {
@@ -307,8 +314,25 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("span"))
                 {
                     try {
-                        HeapWork.addNewRow(chatId,kostyl2,1,kostyl1);
-                        OutCat.addNewCat(chatId,kostyl1);
+                        int w = OutCat.addNewCat(chatId,kostyl1);
+
+                        if (w == 1)
+                        {
+                            kostyl1 = "";
+                            kostyl2 = 0;
+                            SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat1");
+                            Buttons.setButtonsMain(sendMessage, chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
+                        else {
+                            HeapWork.addNewRow(chatId,kostyl2,1,kostyl1);
+
+                            kostyl1 = "";
+                            kostyl2 = 0;
+                            SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat");
+                            Buttons.setButtonsMain(sendMessage, chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
 
                     } catch (SQLException e) {
                         log.error("SQL error in callback! " + e.getLocalizedMessage());
@@ -317,10 +341,25 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("income"))
                 {
                     try {
-                        HeapWork.addNewRow(chatId,kostyl2,0,kostyl1);
-                        InCat.addNewCat(chatId,kostyl1);
+                        int w = InCat.addNewCat(chatId,kostyl1);
 
+                        if (w == 1)
+                        {
+                            kostyl1 = "";
+                            kostyl2 = 0;
+                            SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat1");
+                            Buttons.setButtonsMain(sendMessage, chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
+                        else {
+                            HeapWork.addNewRow(chatId,kostyl2,0,kostyl1);
 
+                            kostyl1 = "";
+                            kostyl2 = 0;
+                            SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat");
+                            Buttons.setButtonsMain(sendMessage, chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
 
                     } catch (SQLException e) {
                         log.error("SQL error in callback! " + e.getLocalizedMessage());
@@ -329,9 +368,11 @@ public class MessageReciever implements Runnable {
                 }
                 else if (calBack.equals("cancel"))
                 {
-                    MyFinanceHandler myFinanceHandler = new MyFinanceHandler(bot);
-                    myFinanceHandler.operate(chatId,update);
-                    //мои финансы
+                    SendMessage sendMessage = Bot.doSendMsg(chatId,"cancelMsg");
+                    Buttons.setButtonsMain(sendMessage,chatId);
+                    bot.sendQueue.add(sendMessage);
+                    kostyl1 = "";
+                    kostyl2 = 0;
                 }
 
 
@@ -392,6 +433,9 @@ public class MessageReciever implements Runnable {
                 MyFinanceHandler myFinanceHandler = new MyFinanceHandler(bot);
                 log.info("Handler for command[" + command.toString() + "] is: " + myFinanceHandler);
                 return myFinanceHandler;
+            case DAY:
+            case MONTH:
+            case YEAR:
             default:
                 log.info("Handler for command[" + command.toString() + "] not Set. Return DefaultHandler");
                 return new DefaultHandler(bot);

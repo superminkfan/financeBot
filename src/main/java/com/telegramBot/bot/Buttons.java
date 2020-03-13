@@ -74,6 +74,30 @@ public class Buttons {
 
     }
 
+    public static void setInlineKeyBoardFinance(SendMessage sendMessage , Long chatId) {
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
+        InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
+        InlineKeyboardButton inlineKeyboardButton3 = new InlineKeyboardButton();
+        String lang = User.getLanguage(chatId);
+        inlineKeyboardButton1.setText(Bot.getFastMsg(lang,"financeInlineBt1"));
+        inlineKeyboardButton1.setCallbackData("dayShow");
+        inlineKeyboardButton2.setText(Bot.getFastMsg(lang,"financeInlineBt2"));
+        inlineKeyboardButton2.setCallbackData("monthShow");
+        inlineKeyboardButton3.setText(Bot.getFastMsg(lang,"financeInlineBt3"));
+        inlineKeyboardButton3.setCallbackData("yearShow");
+        List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
+        keyboardButtonsRow1.add(inlineKeyboardButton1);
+        keyboardButtonsRow1.add(inlineKeyboardButton2);
+        keyboardButtonsRow1.add(inlineKeyboardButton3);
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+        rowList.add(keyboardButtonsRow1);
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+    }
+
+
     public static void setInlineKeyBoardNewCat(SendMessage sendMessage , Long chatId) {
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();

@@ -115,25 +115,26 @@ public class InCat {
         return list;
     }
 
-    public static void addNewCat(Long chatId , String nameCat) throws SQLException
-    {
-        try {
-            Conn.connect();
-        } catch (SQLException e) {
-            log.error("Sql error in addNewUser " + e.getMessage());
-        }
-        catch (ClassNotFoundException e)
-        {
-            log.error("No class found!" + e.getLocalizedMessage());
-        }
-        log.info("Executing insert statmt for new user");
-        Conn.statmt.execute("INSERT INTO inCat (chatid , nameCat) VALUES ( "  + chatId  + ",'" + nameCat + "');");
+    public static int addNewCat(Long chatId , String nameCat) throws SQLException {
+        if (nameCat.equals("")) {
+            return 1;
+        } else {
+            try {
+                Conn.connect();
+            } catch (SQLException e) {
+                log.error("Sql error in addNewUser " + e.getMessage());
+            } catch (ClassNotFoundException e) {
+                log.error("No class found!" + e.getLocalizedMessage());
+            }
+            log.info("Executing insert statmt for new user");
+            Conn.statmt.execute("INSERT INTO inCat (chatid , nameCat) VALUES ( " + chatId + ",'" + nameCat + "');");
 
-
-        try {
-            Conn.CloseDB();
-        } catch (ClassNotFoundException e) {
-            log.error("Error closing db connection " +  e.getLocalizedMessage());
+            try {
+                Conn.CloseDB();
+            } catch (ClassNotFoundException e) {
+                log.error("Error closing db connection " + e.getLocalizedMessage());
+            }
+            return 0;
         }
     }
 

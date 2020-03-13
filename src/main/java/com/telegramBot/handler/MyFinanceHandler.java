@@ -28,6 +28,7 @@ public class MyFinanceHandler extends AbstractHandler  {
 
         HashMap hashMap = User.getBudget(chatId);
         HashMap hashMap1 = HeapWork.getStat(chatId,1);
+        HashMap hashMap2 = HeapWork.getStat(chatId,0);
 
         s.append(Bot.getFastMsg(lang,"financeMsg1"));
         s.append(Bot.getFastMsg(lang,"financeMsg2"));
@@ -58,13 +59,21 @@ public class MyFinanceHandler extends AbstractHandler  {
             s.append(Bot.getFastMsg(lang,"financeMsg11")).append("\n");
         }
         else {
-            s.append(Bot.getFastMsg(lang,"financeMsg12")).append("\n");
+            s.append(Bot.getFastMsg(lang,"financeMsg12")).append("\n\n");
         }
+
+        float rashod = (float) hashMap1.get("sumMounth");
+        float dohod = (float) hashMap2.get("sumMounth");
+
+        s.append(Bot.getFastMsg(lang,"financeMsg10")).append(dohod-rashod).append("\n\n");
+
+        s.append(Bot.getFastMsg(lang,"financeMsg13"));
 
 
         sendMessage.setChatId(chatId);
         sendMessage.setText(s.toString());
         Buttons.setButtonsMain(sendMessage, chatId);
+        Buttons.setInlineKeyBoardFinance(sendMessage,chatId);
 
         bot.sendQueue.add(sendMessage);
         return "";
