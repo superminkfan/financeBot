@@ -141,6 +141,9 @@ public class MessageReciever implements Runnable {
                         try {
                             float lim = Float.valueOf(inputText);
                             User.setMasterLim(chatId, kostylMaster, lim);
+                            SendMessage sendMessage = Bot.doSendMsg(chatId,"budgetOk");
+                            Buttons.setButtonsMain(sendMessage , chatId);
+                            bot.sendQueue.add(sendMessage);
                             kostylMaster = "none";
                             kostylDay = 0;
                             kostylMounth = 0;
