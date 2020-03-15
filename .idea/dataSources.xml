@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="dataBase" uuid="b2d678ae-7b5c-43bd-9e42-2acce5f9ca3f">
+    <data-source source="LOCAL" name="users.db" uuid="df961ae8-c4cb-48f6-b0b6-36d70c3a1413">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\SEM\IdeaProjects\financeBot\src\main\java\com\telegramBot\dbWork\users.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/main/java/com/telegramBot/dbWork/users.db</jdbc-url>
     </data-source>
   </component>
 </project>

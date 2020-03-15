@@ -1,5 +1,72 @@
 {
     "english": {
+        "mainBt1": "\uD83D\uDCBC My finances",
+        "mainBt2": "\uD83D\uDCC8 Categories",
+        "mainBt3": "⚙️ Instructions",
+        "mainBt4": "\uD83D\uDEE0 Settings",
+
+
+        "startMsg": "Hi! My name is financeTOGUbot \uD83E\uDD16\nWith me, you can calculate how much you have earned or spent.\n  ",
+        "changedLang": "Язык изменён! \n",
+
+
+
+        "settingsMsg": "\uD83D\uDCA1 Manage the settings of your bot. In this menu you can choose: interface language, as well as change the budget for day / month / year.",
+    "settingsBt1": "\uD83C\uDF0D Change lang",
+        "settingsBt2": "\uD83D\uDCC4 Change lim",
+
+
+
+        "newCat": "New category found\nChoose where to include it!\n",
+        "newCatBt1": "Span",
+        "newCatBt2": "Income",
+        "newCatBt3": "Cancel",
+
+        "instructionMsg": "Help msg",
+
+        "categoriesMsg": "Category menu \n What categories to display?\nTo enter a new one, enter 228 / * a new category * / ---> and it will appear in the list",
+        "catMsg1": "Income",
+        "catMsg2": "Span",
+        "catMsg3": "Cancel",
+        "listCat": "Category list:\n",
+
+
+        "financeMsg1": "Finance Menu\n\n",
+        "financeMsg2": "Day limit  ",
+        "financeMsg3": "Month limit ",
+        "financeMsg4": "Year limit ",
+        "financeMsg5": "Spent in a day total ",
+        "financeMsg6": "Maximum of category ",
+        "financeMsg7": "Spent in a year total ",
+        "financeMsg8": "Maximum of category ",
+        "financeMsg9": "Limit ",
+        "financeMsg10": "Income - Span = (month)",
+        "financeMsg11": " not done",
+        "financeMsg12": " done",
+        "financeMsg13": "More detailed statistics for time periods ---> select below",
+
+        "financeInlineBt1" : "For day",
+        "financeInlineBt2" : "For month",
+        "financeInlineBt3" : "For year",
+
+        "changeLimitsMsg1": "Limit Change Menu\nChoose for what period to change the limit",
+        "changeLimitsBt1": "For a day",
+        "changeLimitsBt2": "For a month",
+        "changeLimitsBt3": "For a year",
+        "changeLimitsBt4": "Cancel",
+
+        "masterLim": "Enter lemit for ",
+        "cancelMsg": "Ok, action canceled",
+
+        "newHeapRow": "Entry is added!",
+        "newCatWat": "New category and entry added!",
+        "newCatWat1": "You cannot enter empty or duplicate categories !!!\nThe action is canceled!",
+        "budgetOk": "Limit set!",
+
+        "dayHandlerMsg1": " Display a list of income / expenses per day",
+        "monthHandlerMsg1": " Display a list of income / expenses per month",
+        "yearHandlerMsg1": " Display a list of income / expenses per year"
+
 
     } ,
     "russian" : {
@@ -66,7 +133,9 @@
         "newCatWat1": "Нельзя вводить пустые или повторяющиеся категории!!!\nДействие откланено!",
         "budgetOk": "Бюджет установлен!",
 
-        "dayHandlerMsg1": " Вывод списка доходов/расходов за день"
+        "dayHandlerMsg1": " Вывод списка доходов/расходов за день",
+        "monthHandlerMsg1": " Вывод списка доходов/расходов за месяц",
+        "yearHandlerMsg1": " Вывод списка доходов/расходов за год"
 
 
 

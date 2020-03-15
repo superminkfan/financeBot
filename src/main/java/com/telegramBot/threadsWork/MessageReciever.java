@@ -225,11 +225,13 @@ public class MessageReciever implements Runnable {
                 }
                 else if (calBack.equals("monthShow"))
                 {
-
+                    MonthHandler monthHandler = new MonthHandler(bot);
+                    monthHandler.operate(chatId,update);
                 }
                 else if (calBack.equals("yearShow"))
                 {
-
+                    YearHandler yearHandler = new YearHandler(bot);
+                    yearHandler.operate(chatId,update);
                 }
                 else if (calBack.equals("changeDayLim"))
                 {
@@ -257,11 +259,6 @@ public class MessageReciever implements Runnable {
 
                 else if (calBack.equals("changeLimit"))
                 {
-                    SendMessage sendMessage = new SendMessage();
-                    sendMessage.setChatId(chatId);
-                    sendMessage.setText("Work in progress, bitch!");
-                    bot.sendQueue.add(sendMessage);
-
                     ChangeLimitsHandler changeLimitsHandler = new ChangeLimitsHandler(bot);
                     changeLimitsHandler.operate(chatId,update);
                 }

@@ -56,6 +56,7 @@ public class HeapWork {
                 //return hashMap;
             } else {
 
+                arrayList.add("Категория   ---   Цена");
 
                 while (resSet.next()) {
                     String string = resSet.getString("date");
@@ -66,6 +67,106 @@ public class HeapWork {
                         float temp = resSet.getFloat("amount");
                         String nameCat = resSet.getString("nameCat");
                         arrayList.add("" + nameCat + "---" + temp);
+
+                    }
+                }
+
+
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+
+    public static ArrayList getMonthStatSpans(Long chatId) {
+        ArrayList arrayList = new ArrayList();
+
+        Calendar time = Calendar.getInstance();
+        time.add(Calendar.MILLISECOND, -time.getTimeZone().getOffset(time.getTimeInMillis()));
+        Date now = time.getTime();
+
+        Date yesterday = Date.from(now.toInstant().minusSeconds(2629743));
+        log.info("Executing select statmt for getMonthStatSpans for users table...");
+
+        try {
+            Conn.connect();
+            ResultSet resSet = null;
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM heap WHERE chatId = " + chatId + " AND service =  1;");
+
+
+            if (resSet.isClosed()) {
+                log.warn("result set is empty, thats odd");
+                arrayList.add("none");
+                //return hashMap;
+            } else {
+                arrayList.add("Категория   ---   Цена");
+
+
+                while (resSet.next()) {
+                    String string = resSet.getString("date");
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//задаю формат даты
+                    Date date = formatter.parse(string);//создаю дату через
+
+                    if (!yesterday.after(date) && !now.before(date)) {//все записи за день
+                        float temp = resSet.getFloat("amount");
+                        String nameCat = resSet.getString("nameCat");
+                        arrayList.add("" + nameCat + "---" + temp);
+
+                    }
+                }
+
+
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+
+    public static ArrayList getYearStatSpans(Long chatId) {
+        ArrayList arrayList = new ArrayList();
+
+        Calendar time = Calendar.getInstance();
+        time.add(Calendar.MILLISECOND, -time.getTimeZone().getOffset(time.getTimeInMillis()));
+        Date now = time.getTime();
+
+        Date yesterday = Date.from(now.toInstant().minusSeconds(31556926));
+        log.info("Executing select statmt for getYearStatSpans for users table...");
+
+        try {
+            Conn.connect();
+            ResultSet resSet = null;
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM heap WHERE chatId = " + chatId + " AND service =  1;");
+
+
+            if (resSet.isClosed()) {
+                log.warn("result set is empty, thats odd");
+                arrayList.add("none");
+                //return hashMap;
+            } else {
+
+
+                arrayList.add("Категория   ---   Цена");
+                while (resSet.next()) {
+                    String string = resSet.getString("date");
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//задаю формат даты
+                    Date date = formatter.parse(string);//создаю дату через
+
+                    if (!yesterday.after(date) && !now.before(date)) {//все записи за день
+                        float temp = resSet.getFloat("amount");
+                        String nameCat = resSet.getString("nameCat");
+                        arrayList.add("" + nameCat + "   ---   " + temp);
 
                     }
                 }

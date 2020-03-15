@@ -5,7 +5,12 @@ import com.telegramBot.bot.Bot;
 import com.telegramBot.threadsWork.MessageReciever;
 import com.telegramBot.threadsWork.MessageSender;
 import org.telegram.telegrambots.ApiContextInitializer;
+import org.telegram.telegrambots.bots.DefaultBotOptions;
+import org.telegram.telegrambots.meta.ApiContext;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+
+import java.net.Authenticator;
+import java.net.PasswordAuthentication;
 
 //import com.crypto.telegrambot.threadsWork.transService.RefreshStatus;
 
@@ -15,11 +20,20 @@ public class App {
     private static final int PRIORITY_FOR_RECEIVER = 3;
     private static final String BOT_ADMIN = "687187915";
 
+    private static String BOT_NAME = "financeTOGUbot";
+    private static String BOT_TOKEN = "958126512:AAGvd4troi3MmLlnUOReujPOKJAs8NgMPlM" /* your bot's token here */;
 
+    private static String PROXY_HOST = "193.70.81.255" /* proxy host */;
+    private static Integer PROXY_PORT = 4854 /* proxy port */;
+    private static String PROXY_USER = "elrid" /* proxy user */;
+    private static String PROXY_PASSWORD = "Hf,jnf999" /* proxy password */;
 
     public static void main(String[] args) {
         ApiContextInitializer.init();
-        Bot bot = new Bot("financeTOGUbot", "958126512:AAGvd4troi3MmLlnUOReujPOKJAs8NgMPlM");
+
+
+
+        Bot bot = new Bot(BOT_NAME, BOT_TOKEN);
 
         MessageReciever messageReciever = new MessageReciever(bot);
         MessageSender messageSender = new MessageSender(bot);
