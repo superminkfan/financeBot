@@ -26,8 +26,8 @@ public class MessageReciever implements Runnable {
     private final int WAIT_FOR_NEW_MESSAGE_DELAY = 1000;
     private final String END_LINE = "\n";
 
-    private String kostyl1="";
-    private float kostyl2=0;
+    private String temp_String ="";
+    private float temp_Int =0;
     private int Day = 0;
     private int Month = 0;
     private int Year = 0;
@@ -76,7 +76,7 @@ public class MessageReciever implements Runnable {
                     if (RegEx.checkWithRegExp(inputText))
                     {
 
-                        HashMap hashMap = RegEx.delimNaPopalam(inputText);
+                        HashMap hashMap = RegEx.devideByHalf(inputText);
                         String action = (String) hashMap.get("action");
                         action = action.replaceAll(" " , "");
                         float amount = (Float) hashMap.get("amount");
@@ -101,8 +101,8 @@ public class MessageReciever implements Runnable {
                             }
                             else
                             {
-                                kostyl1 = action;
-                                kostyl2 = amount;
+                                temp_String = action;
+                                temp_Int = amount;
                                 SendMessage sendMessage2 = Bot.doSendMsg(chatId,"newCat");
                                 Buttons.setInlineKeyBoardNewCat(sendMessage2, chatId);
                                 bot.sendQueue.add(sendMessage2);
@@ -111,7 +111,7 @@ public class MessageReciever implements Runnable {
                         }
                         catch (SQLException e)
                         {
-                            log.error("SQL palundra!!! " + e.getLocalizedMessage());
+                            log.error("SQL error!!! " + e.getLocalizedMessage());
                         }
 
                     }
@@ -120,12 +120,12 @@ public class MessageReciever implements Runnable {
                     String lang = User.getLanguage(chatId);
 
 
-                    if (Day == 1 || Month == 1 || Year == 1 || RegEx.yoloRegExp(inputText))//вот тут будет еще условие с регулярными выражениями
+                    if (Day == 1 || Month == 1 || Year == 1 || RegEx.checkRegExp(inputText))
                     {
-                        if (RegEx.yoloRegExp(inputText))
+                        if (RegEx.checkRegExp(inputText))
                         {
                             System.out.println("Proshel vtoroy regExp!");
-                            HashMap hashMap = RegEx.delimNaPopalam(inputText);
+                            HashMap hashMap = RegEx.devideByHalf(inputText);
                             String master = (String)hashMap.get("action");
                             master.replaceAll(" ", "");
                             float lim = (float)hashMap.get("amount");
@@ -181,7 +181,9 @@ public class MessageReciever implements Runnable {
                     }
                 }
 
-            } else if (update.hasCallbackQuery()) {
+            }
+
+            else if (update.hasCallbackQuery()) {
                 String calBack = update.getCallbackQuery().getData();
                 Long chatId = update.getCallbackQuery().getMessage().getChatId();
                 log.warn("CallbackQuery !!!! ==== " + calBack);
@@ -307,21 +309,21 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("span"))
                 {
                     try {
-                        int w = OutCategory.addNewCat(chatId,kostyl1);
+                        int w = OutCategory.addNewCat(chatId, temp_String);
 
                         if (w == 1)
                         {
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat1");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
                         }
                         else {
-                            HeapWork.addNewRow(chatId,kostyl2,1,kostyl1);
+                            HeapWork.addNewRow(chatId, temp_Int,1, temp_String);
 
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
@@ -334,21 +336,21 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("income"))
                 {
                     try {
-                        int w = InCategory.addNewCat(chatId,kostyl1);
+                        int w = InCategory.addNewCat(chatId, temp_String);
 
                         if (w == 1)
                         {
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat1");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
                         }
                         else {
-                            HeapWork.addNewRow(chatId,kostyl2,0,kostyl1);
+                            HeapWork.addNewRow(chatId, temp_Int,0, temp_String);
 
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
@@ -364,8 +366,8 @@ public class MessageReciever implements Runnable {
                     SendMessage sendMessage = Bot.doSendMsg(chatId,"cancelMsg");
                     Buttons.setButtonsMain(sendMessage,chatId);
                     bot.sendQueue.add(sendMessage);
-                    kostyl1 = "";
-                    kostyl2 = 0;
+                    temp_String = "";
+                    temp_Int = 0;
                 }
 
 

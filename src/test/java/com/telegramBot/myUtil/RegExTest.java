@@ -23,11 +23,11 @@ public class RegExTest {
         System.out.println("Cool check too:");
 
 
-        System.out.println(RegEx.delimNaPopalam("111111 hui"));
-        System.out.println(RegEx.delimNaPopalam("222222 хуй"));
-        System.out.println(RegEx.delimNaPopalam("хуй 3333333"));
-        System.out.println(RegEx.delimNaPopalam("hui 444444"));
-        System.out.println(RegEx.delimNaPopalam("hui"));
-        System.out.println(RegEx.delimNaPopalam("хуй"));
+        System.out.println(RegEx.devideByHalf("111111 hui"));
+        System.out.println(RegEx.devideByHalf("222222 хуй"));
+        System.out.println(RegEx.devideByHalf("хуй 3333333"));
+        System.out.println(RegEx.devideByHalf("hui 444444"));
+        System.out.println(RegEx.devideByHalf("hui"));
+        System.out.println(RegEx.devideByHalf("хуй"));
     }
 }

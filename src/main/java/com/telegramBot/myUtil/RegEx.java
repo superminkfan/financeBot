@@ -13,20 +13,14 @@ public class RegEx {
 
     }
 
-    public static boolean yoloRegExp(String inputString){
+    public static boolean checkRegExp(String inputString){
         Pattern p1 = Pattern.compile("^[/][a-zA-Z]{1,4}([,\\s])+\\d{1,10}");
 
         return p1.matcher(inputString).matches();
 
     }
-    public static boolean yaSkazalYolo(String inputString){
-        Pattern p1 = Pattern.compile("^[/][a-zA-Z]{1,4}");
 
-        return p1.matcher(inputString).matches();
-
-    }
-
-    public static HashMap  delimNaPopalam(String inputString){
+    public static HashMap devideByHalf(String inputString){
         float cost = 0;
         String action = "";
 
