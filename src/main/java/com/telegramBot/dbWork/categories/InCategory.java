@@ -8,11 +8,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class OutCat {
-    private static final Logger log = Logger.getLogger(OutCat.class);
+public class InCategory {
+    private static final Logger log = Logger.getLogger(InCategory.class);
 
-    public static boolean searchOutCat(Long chatId , String maybeNameCat) throws SQLException {
-        log.info("Executing select statmt for searchOutCat...");
+    public static boolean searchInCat(Long chatId , String maybeNameCat) throws SQLException {
+        log.info("Executing select statmt for searchInCat...");
+
         try {
             Conn.connect();
         } catch (SQLException e) {
@@ -25,7 +26,7 @@ public class OutCat {
 
 
         ResultSet resSet1 = Conn.statmt.executeQuery(
-                "SELECT * FROM outCat WHERE chatid = 1 AND nameCat = '" + maybeNameCat + "';");
+                "SELECT * FROM inCat WHERE chatid = 1 AND nameCat = '" + maybeNameCat + "';");
         if (resSet1.isClosed())
         {
             log.warn("standart categories result set is empty!!!!!!!!!! " + User.class.toString());
@@ -42,9 +43,8 @@ public class OutCat {
 
 
 
-
         ResultSet resSet = Conn.statmt.executeQuery(
-                "SELECT * FROM outCat WHERE chatid = " + chatId + " AND nameCat = '" + maybeNameCat + "';");
+                "SELECT * FROM inCat WHERE chatid = " + chatId + " AND nameCat = '" + maybeNameCat + "';");
 
         if (resSet.isClosed())
         {
@@ -56,19 +56,18 @@ public class OutCat {
             }
             return false;
         }
-        else {
-            log.info("got one nameCat key from db");
-            //nameCat = resSet.getString("nameCat");
-            try {
-                Conn.CloseDB();
-            } catch (ClassNotFoundException e) {
-                log.error("Error closing db connection " +  e.getLocalizedMessage());
-            }
+
+        log.info("got one nameCat key from db");
+        //String nameCat = resSet.getString("nameCat");
+        try {
+            Conn.CloseDB();
+        } catch (ClassNotFoundException e) {
+            log.error("Error closing db connection " +  e.getLocalizedMessage());
         }
+
 
         return true;
     }
-
 
     public static ArrayList getAllInCats(Long chatId ) throws SQLException {
         log.info("Executing select statmt for getAllInCats...");
@@ -85,7 +84,7 @@ public class OutCat {
 
 
         ResultSet resSet = Conn.statmt.executeQuery(
-                "SELECT * FROM outCat WHERE chatid = " + chatId + "  OR  chatid = 1 ;");
+                "SELECT * FROM inCat WHERE chatid = " + chatId + "  OR  chatid = 1 ;");
 
         if (resSet.isClosed())
         {
@@ -102,8 +101,8 @@ public class OutCat {
         String elem = null;
         while (resSet.next())
         {
-            elem = resSet.getString("nameCat");
-            list.add(elem);
+             elem = resSet.getString("nameCat");
+             list.add(elem);
         }
         try {
             Conn.CloseDB();
@@ -115,12 +114,10 @@ public class OutCat {
         return list;
     }
 
-    public static int addNewCat(Long chatId , String nameCat) throws SQLException
-    {
+    public static int addNewCat(Long chatId , String nameCat) throws SQLException {
         if (nameCat.equals("")) {
             return 1;
-        }
-        else {
+        } else {
             try {
                 Conn.connect();
             } catch (SQLException e) {
@@ -129,8 +126,7 @@ public class OutCat {
                 log.error("No class found!" + e.getLocalizedMessage());
             }
             log.info("Executing insert statmt for new user");
-            Conn.statmt.execute("INSERT INTO outCat (chatid , nameCat) VALUES ( " + chatId + ",'" + nameCat + "');");
-
+            Conn.statmt.execute("INSERT INTO inCat (chatid , nameCat) VALUES ( " + chatId + ",'" + nameCat + "');");
 
             try {
                 Conn.CloseDB();
@@ -138,7 +134,7 @@ public class OutCat {
                 log.error("Error closing db connection " + e.getLocalizedMessage());
             }
             return 0;
-
         }
     }
+
 }

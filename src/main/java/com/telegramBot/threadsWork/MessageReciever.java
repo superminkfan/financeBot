@@ -5,8 +5,8 @@ import com.telegramBot.bot.Buttons;
 import com.telegramBot.command.Command;
 import com.telegramBot.command.ParsedCommand;
 import com.telegramBot.command.Parser;
-import com.telegramBot.dbWork.categories.InCat;
-import com.telegramBot.dbWork.categories.OutCat;
+import com.telegramBot.dbWork.categories.InCategory;
+import com.telegramBot.dbWork.categories.OutCategory;
 import com.telegramBot.dbWork.heap.HeapWork;
 import com.telegramBot.dbWork.users.User;
 import com.telegramBot.handler.*;
@@ -34,8 +34,7 @@ public class MessageReciever implements Runnable {
     private String Master = "none";
 
 
-    private Bot bot;
-    private Parser parser;
+    private Bot bot;private Parser parser;
     public MessageReciever(Bot bot) {
         this.bot = bot;
         parser = new Parser(bot.getBotName());
@@ -84,7 +83,7 @@ public class MessageReciever implements Runnable {
                         System.out.println("то шо ввёл пользователь _"  + action + "_  " + amount);
                         try {
 
-                            if (InCat.searchInCat(chatId,action))
+                            if (InCategory.searchInCat(chatId,action))
                             {
                                 HeapWork.addNewRow(chatId,amount,0 , action);
 
@@ -92,7 +91,7 @@ public class MessageReciever implements Runnable {
                                 Buttons.setButtonsMain(sendMessage2, chatId);
                                 bot.sendQueue.add(sendMessage2);
                             }
-                            else if (OutCat.searchOutCat(chatId, action))
+                            else if (OutCategory.searchOutCat(chatId, action))
                             {
                                 HeapWork.addNewRow(chatId,amount,1 , action);
 
@@ -180,15 +179,7 @@ public class MessageReciever implements Runnable {
                         settingsHandler.operate(chatId ,  update);
                         //Настройки
                     }
-
-
-
-
-
                 }
-
-
-                
 
             } else if (update.hasCallbackQuery()) {
                 String calBack = update.getCallbackQuery().getData();
@@ -269,7 +260,7 @@ public class MessageReciever implements Runnable {
                     bot.sendQueue.add(sendMessage);
                     ArrayList list = new ArrayList();
                     try {
-                         list = InCat.getAllInCats(chatId);
+                         list = InCategory.getAllInCats(chatId);
                     } catch (SQLException e) {
                         log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
                         return;
@@ -298,7 +289,7 @@ public class MessageReciever implements Runnable {
                     bot.sendQueue.add(sendMessage);
                     ArrayList list = new ArrayList();
                     try {
-                        list = OutCat.getAllInCats(chatId);
+                        list = OutCategory.getAllInCats(chatId);
                     } catch (SQLException e) {
                         log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
                         return;
@@ -316,7 +307,7 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("span"))
                 {
                     try {
-                        int w = OutCat.addNewCat(chatId,kostyl1);
+                        int w = OutCategory.addNewCat(chatId,kostyl1);
 
                         if (w == 1)
                         {
@@ -343,7 +334,7 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("income"))
                 {
                     try {
-                        int w = InCat.addNewCat(chatId,kostyl1);
+                        int w = InCategory.addNewCat(chatId,kostyl1);
 
                         if (w == 1)
                         {
@@ -383,9 +374,6 @@ public class MessageReciever implements Runnable {
 
         } else log.warn("Cant operate type of object: " + object.toString());
     }
-
-
-
 
     private void analyzeForUpdateType(Update update) throws IOException {
         Long chatId = update.getMessage().getChatId();
