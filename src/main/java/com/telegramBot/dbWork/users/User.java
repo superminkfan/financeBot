@@ -176,9 +176,6 @@ public class User {
               hashMap.put("mounth",mounth);
               hashMap.put("year",year);
 
-
-
-
             Conn.CloseDB();
         } catch (SQLException e) {
             log.error("SQL exeptrion in getBudget()! " + e.getLocalizedMessage());

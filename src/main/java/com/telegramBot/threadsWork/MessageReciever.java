@@ -246,7 +246,6 @@ public class MessageReciever implements Runnable {
                     wat.operate(chatId,"month");
                     kostylMounth = 1;
                     kostylMaster = "month";
-
                 }
                 else if (calBack.equals("changeYearLim"))
                 {
@@ -254,7 +253,6 @@ public class MessageReciever implements Runnable {
                     wat.operate(chatId,"year");
                     kostylYear = 1;
                     kostylMaster = "year";
-
                 }
 
                 else if (calBack.equals("changeLimit"))
@@ -286,6 +284,10 @@ public class MessageReciever implements Runnable {
                     sendMessage1.setText(s.toString());
                     bot.sendQueue.add(sendMessage1);
 
+
+                    /**
+                     * вот здесь делать
+                     */
                 }
                 else if (calBack.equals("spanCats"))
                 {

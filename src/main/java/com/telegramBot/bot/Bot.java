@@ -23,10 +23,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class Bot extends TelegramLongPollingBot {
     private static final Logger log = Logger.getLogger(Bot.class);
     private final int RECONNECT_PAUSE = 10000;
-    private static String PROXY_HOST = "193.70.81.255" /* proxy host */;
-    private static Integer PROXY_PORT = 3128 /* proxy port */;
-    private static String PROXY_USER = "elrid" /* proxy user */;
-    private static String PROXY_PASSWORD = "Hf,jnf999" /* proxy password */;
 
     private String botName;
     private String botToken;
