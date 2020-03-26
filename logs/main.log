@@ -16357,3 +16357,668 @@ Caused by: java.net.ConnectException: Connection timed out: no further informati
 2020-03-26 23:59:05,930[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@36fd3a47] DONE
 2020-03-26 23:59:05,930[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
 2020-03-26 23:59:05,930[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@36fd3a47] CLOSED! 
+2020-03-27 00:04:00,913[INFO ][main            ][         com.telegramBot.bot.Bot] - [STARTED] TelegramAPI. Bot Connected. Bot class: com.telegramBot.bot.Bot@4e76dac
+2020-03-27 00:04:00,915[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - [STARTED] MsgReciever.  Bot class: com.telegramBot.bot.Bot@4e76dac
+2020-03-27 00:04:00,915[INFO ][MsgSender       ][ramBot.threadsWork.MessageSender] - [STARTED] MsgSender.  Bot class: com.telegramBot.bot.Bot@4e76dac
+2020-03-27 00:04:05,949[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215550
+2020-03-27 00:04:06,922[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215550, message=Message{messageId=1775, from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231445, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='/start', entities=[MessageEntity{type='bot_command', offset=0, length=6, url='null', user=null, language='null', text='null'}], captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:06,929[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[START] is: com.telegramBot.handler.SystemHandler@718fa288
+2020-03-27 00:04:06,931[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for searchUser...
+2020-03-27 00:04:06,933[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:07,113[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@79d19939] DONE
+2020-03-27 00:04:07,115[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@79d19939] CLOSED! 
+2020-03-27 00:04:07,116[INFO ][MsgReciever     ][elegramBot.handler.SystemHandler] - Old user. ChatId = 687187915
+2020-03-27 00:04:07,116[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:07,116[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:07,118[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6a6191f2] DONE
+2020-03-27 00:04:07,119[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6a6191f2] CLOSED! 
+2020-03-27 00:04:07,123[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:07,124[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:07,126[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@17ebc5e2] DONE
+2020-03-27 00:04:07,127[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@17ebc5e2] CLOSED! 
+2020-03-27 00:04:07,130[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:07,130[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:07,132[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3025ef39] DONE
+2020-03-27 00:04:07,133[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3025ef39] CLOSED! 
+2020-03-27 00:04:07,134[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:04:07,134[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:07,136[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4a670bc3] DONE
+2020-03-27 00:04:07,138[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4a670bc3] CLOSED! 
+2020-03-27 00:04:07,138[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:04:07,139[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:07,142[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@113192ac] DONE
+2020-03-27 00:04:07,143[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@113192ac] CLOSED! 
+2020-03-27 00:04:08,313[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215551
+2020-03-27 00:04:09,145[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215551, message=Message{messageId=1778, from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231448, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='📈 Категории', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:09,145[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:04:09,145[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:09,146[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:09,146[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@34ca32a7] DONE
+2020-03-27 00:04:09,147[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@34ca32a7] CLOSED! 
+2020-03-27 00:04:09,147[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:09,147[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:09,148[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5b385070] DONE
+2020-03-27 00:04:09,149[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5b385070] CLOSED! 
+2020-03-27 00:04:09,149[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:09,149[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:09,150[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3a36a843] DONE
+2020-03-27 00:04:09,150[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3a36a843] CLOSED! 
+2020-03-27 00:04:09,150[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:04:09,150[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:09,151[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5f8ceaa8] DONE
+2020-03-27 00:04:09,152[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5f8ceaa8] CLOSED! 
+2020-03-27 00:04:09,152[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:04:09,152[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:09,152[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@11b4e9c9] DONE
+2020-03-27 00:04:09,153[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@11b4e9c9] CLOSED! 
+2020-03-27 00:04:12,335[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215552
+2020-03-27 00:04:13,154[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215552, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2951449625385852154', from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1779, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231449, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='Меню категорий 
+ Какие категории вывести на экран?
+Чтобы ввести новую то введи 228 /новая категория/ ---> и она появится в списке', entities=[MessageEntity{type='bold', offset=84, length=15, url='null', user=null, language='null', text='null'}], captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Доходы', url='null', callbackData='incomeCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Расходы', url='null', callbackData='spanCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='spanCats', gameShortName='null', chatInstance='223889736953587334'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:13,155[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== spanCats
+2020-03-27 00:04:13,155[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:13,155[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:13,157[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@816805f] DONE
+2020-03-27 00:04:13,158[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@816805f] CLOSED! 
+2020-03-27 00:04:13,160[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for getAllInCats...
+2020-03-27 00:04:13,160[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:13,162[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3f8c3641] DONE
+2020-03-27 00:04:13,163[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3f8c3641] CLOSED! 
+2020-03-27 00:04:13,163[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:13,163[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:13,165[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@9c06ad8] DONE
+2020-03-27 00:04:13,166[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@9c06ad8] CLOSED! 
+2020-03-27 00:04:13,166[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:13,167[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@356817c7] DONE
+2020-03-27 00:04:13,168[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:04:13,181[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@356817c7] CLOSED! 
+2020-03-27 00:04:15,993[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215553
+2020-03-27 00:04:16,182[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215553, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2951449621690491237', from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1781, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231454, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='транспорт
+продукты
+ништяки
+одежда
+комуналка
+развлечения
+хобби
+подарки
+медицина
+налоги
+кредит
+хлеб2', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Изменить', url='null', callbackData='changeCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Удалить', url='null', callbackData='deleteCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='deleteCat', gameShortName='null', chatInstance='223889736953587334'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:16,182[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== deleteCat
+2020-03-27 00:04:16,183[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceWhat for users table...
+2020-03-27 00:04:16,183[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:16,184[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@27ff3df9] DONE
+2020-03-27 00:04:16,184[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@27ff3df9] CLOSED! 
+2020-03-27 00:04:16,185[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:16,186[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4d7545da] DONE
+2020-03-27 00:04:16,186[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceDelete...
+2020-03-27 00:04:16,197[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4d7545da] CLOSED! 
+2020-03-27 00:04:16,197[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:16,197[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:16,199[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1e7e26a7] DONE
+2020-03-27 00:04:16,199[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1e7e26a7] CLOSED! 
+2020-03-27 00:04:16,199[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for getAllInCats...
+2020-03-27 00:04:16,199[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:16,200[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4030c064] DONE
+2020-03-27 00:04:16,201[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4030c064] CLOSED! 
+2020-03-27 00:04:19,097[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215554
+2020-03-27 00:04:19,202[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215554, message=Message{messageId=1783, from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231458, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='хлеб2', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:19,202[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:04:19,203[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:19,203[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,205[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6bd574f5] DONE
+2020-03-27 00:04:19,206[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6bd574f5] CLOSED! 
+2020-03-27 00:04:19,206[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:04:19,206[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,208[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@ce9b7c0] DONE
+2020-03-27 00:04:19,209[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@ce9b7c0] CLOSED! 
+2020-03-27 00:04:19,209[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:04:19,209[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,211[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@634de3e4] DONE
+2020-03-27 00:04:19,221[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@634de3e4] CLOSED! 
+2020-03-27 00:04:19,221[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,223[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@25b82c09] DONE
+2020-03-27 00:04:19,223[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceDelete...
+2020-03-27 00:04:19,235[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@25b82c09] CLOSED! 
+2020-03-27 00:04:19,235[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceWhat for users table...
+2020-03-27 00:04:19,235[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,237[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@650a8697] DONE
+2020-03-27 00:04:19,238[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@650a8697] CLOSED! 
+2020-03-27 00:04:19,239[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,241[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@241c7a41] DONE
+2020-03-27 00:04:19,241[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing update statmt for cat
+2020-03-27 00:04:19,261[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@241c7a41] CLOSED! 
+2020-03-27 00:04:19,262[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,263[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@28c2ffe5] DONE
+2020-03-27 00:04:19,263[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:04:19,274[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@28c2ffe5] CLOSED! 
+2020-03-27 00:04:19,274[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,276[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4cfe4690] DONE
+2020-03-27 00:04:19,276[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
+2020-03-27 00:04:19,278[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4cfe4690] CLOSED! 
+2020-03-27 00:04:19,278[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:19,278[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,280[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@7d715fa6] DONE
+2020-03-27 00:04:19,281[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@7d715fa6] CLOSED! 
+2020-03-27 00:04:19,281[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:19,281[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:19,283[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3af8ec3b] DONE
+2020-03-27 00:04:19,284[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3af8ec3b] CLOSED! 
+2020-03-27 00:04:23,674[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215555
+2020-03-27 00:04:24,285[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215555, message=Message{messageId=1785, from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231463, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='💼 Мои финансы', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:24,285[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:04:24,286[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:24,286[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,287[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5fa0156] DONE
+2020-03-27 00:04:24,288[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5fa0156] CLOSED! 
+2020-03-27 00:04:24,289[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:24,289[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,291[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4c75e917] DONE
+2020-03-27 00:04:24,292[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4c75e917] CLOSED! 
+2020-03-27 00:04:24,292[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getBudget for users table...
+2020-03-27 00:04:24,292[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,293[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@31115d96] DONE
+2020-03-27 00:04:24,295[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@31115d96] CLOSED! 
+2020-03-27 00:04:24,297[INFO ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - Executing select statmt for getStat for users table...
+2020-03-27 00:04:24,297[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,298[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2f1c909f] DONE
+2020-03-27 00:04:24,299[WARN ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - result set is empty, thats odd
+2020-03-27 00:04:24,300[WARN ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - result set is empty, thats odd
+2020-03-27 00:04:24,300[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2f1c909f] CLOSED! 
+2020-03-27 00:04:24,300[INFO ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - Executing select statmt for getStat for users table...
+2020-03-27 00:04:24,300[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,302[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4c42e93a] DONE
+2020-03-27 00:04:24,302[WARN ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - result set is empty, thats odd
+2020-03-27 00:04:24,303[WARN ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - result set is empty, thats odd
+2020-03-27 00:04:24,303[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4c42e93a] CLOSED! 
+2020-03-27 00:04:24,305[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:24,305[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,306[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@33a68af8] DONE
+2020-03-27 00:04:24,307[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@33a68af8] CLOSED! 
+2020-03-27 00:04:24,308[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:24,308[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,309[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@78757c7b] DONE
+2020-03-27 00:04:24,310[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@78757c7b] CLOSED! 
+2020-03-27 00:04:24,310[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:04:24,310[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,312[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@23a54176] DONE
+2020-03-27 00:04:24,313[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@23a54176] CLOSED! 
+2020-03-27 00:04:24,313[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:04:24,313[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:24,314[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@73f7ff63] DONE
+2020-03-27 00:04:24,315[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@73f7ff63] CLOSED! 
+2020-03-27 00:04:27,825[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215556
+2020-03-27 00:04:28,317[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215556, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2951449621353387236', from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1786, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231464, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='Меню финансов
+
+Бюджет на день  450.0
+Бюджет на месяц 13500.0
+Бюджет на год 4873500.0
+
+Потрачено за день всего 0.0
+Максимум из категории    0.0
+Бюджет  выполнен
+
+Потрачено за месяц всего 0.0
+Максимум из категории    0.0
+Бюджет  выполнен
+
+Доход - Расход = (за месяц)0.0
+
+Более детальная статистика за периоды времени ---> выбери ниже', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='За день', url='null', callbackData='dayShow', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='За месяц', url='null', callbackData='monthShow', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='За год', url='null', callbackData='yearShow', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='dayShow', gameShortName='null', chatInstance='223889736953587334'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:28,317[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== dayShow
+2020-03-27 00:04:28,318[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:28,318[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:28,319[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@274476f0] DONE
+2020-03-27 00:04:28,320[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@274476f0] CLOSED! 
+2020-03-27 00:04:28,320[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:28,320[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:28,322[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2e632d9f] DONE
+2020-03-27 00:04:28,322[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2e632d9f] CLOSED! 
+2020-03-27 00:04:28,322[INFO ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - Executing select statmt for getDayStatSpans for users table...
+2020-03-27 00:04:28,322[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:28,323[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6223d3d7] DONE
+2020-03-27 00:04:28,324[WARN ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - result set is empty, thats odd
+2020-03-27 00:04:30,939[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215557
+2020-03-27 00:04:31,325[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215557, message=Message{messageId=1789, from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231470, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='📈 Категории', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:31,325[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:04:31,325[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:31,325[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:31,326[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1c09391e] DONE
+2020-03-27 00:04:31,327[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1c09391e] CLOSED! 
+2020-03-27 00:04:31,327[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:31,327[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:31,328[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@18fe3f99] DONE
+2020-03-27 00:04:31,328[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@18fe3f99] CLOSED! 
+2020-03-27 00:04:31,328[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:31,328[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:31,329[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2f46e6cc] DONE
+2020-03-27 00:04:31,330[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2f46e6cc] CLOSED! 
+2020-03-27 00:04:31,330[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:04:31,330[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:31,331[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@53072598] DONE
+2020-03-27 00:04:31,331[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@53072598] CLOSED! 
+2020-03-27 00:04:31,331[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:04:31,331[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:31,332[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@693272f] DONE
+2020-03-27 00:04:31,333[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@693272f] CLOSED! 
+2020-03-27 00:04:34,348[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215558
+2020-03-27 00:04:35,334[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215558, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2951449625405076157', from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1790, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231472, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='Меню категорий 
+ Какие категории вывести на экран?
+Чтобы ввести новую то введи 228 /новая категория/ ---> и она появится в списке', entities=[MessageEntity{type='bold', offset=84, length=15, url='null', user=null, language='null', text='null'}], captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Доходы', url='null', callbackData='incomeCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Расходы', url='null', callbackData='spanCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='spanCats', gameShortName='null', chatInstance='223889736953587334'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:35,334[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== spanCats
+2020-03-27 00:04:35,334[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:35,334[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:35,335[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6f78d293] DONE
+2020-03-27 00:04:35,336[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6f78d293] CLOSED! 
+2020-03-27 00:04:35,336[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for getAllInCats...
+2020-03-27 00:04:35,336[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:35,336[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@77903936] DONE
+2020-03-27 00:04:35,337[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@77903936] CLOSED! 
+2020-03-27 00:04:35,337[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:35,337[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:35,338[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1dd1f9b9] DONE
+2020-03-27 00:04:35,338[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1dd1f9b9] CLOSED! 
+2020-03-27 00:04:35,338[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:35,339[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2e40f73] DONE
+2020-03-27 00:04:35,339[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:04:35,350[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2e40f73] CLOSED! 
+2020-03-27 00:04:42,075[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215559
+2020-03-27 00:04:42,352[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215559, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2951449625331253497', from=User{id=687187915, firstName='Семён', isBot=false, lastName='Зикунов', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1792, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231476, chat=Chat{id=687187915, type='private', title='null', firstName='Семён', lastName='Зикунов', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='транспорт
+продукты
+ништяки
+одежда
+комуналка
+развлечения
+хобби
+подарки
+медицина
+налоги
+кредит', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Изменить', url='null', callbackData='changeCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Удалить', url='null', callbackData='deleteCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='cancel', gameShortName='null', chatInstance='223889736953587334'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:42,352[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== cancel
+2020-03-27 00:04:42,353[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:42,353[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:42,354[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2b21b9f6] DONE
+2020-03-27 00:04:42,355[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2b21b9f6] CLOSED! 
+2020-03-27 00:04:42,356[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:42,356[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:42,357[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5d8e7c2d] DONE
+2020-03-27 00:04:42,358[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5d8e7c2d] CLOSED! 
+2020-03-27 00:04:42,358[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:42,359[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4f005a14] DONE
+2020-03-27 00:04:42,359[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceDelete...
+2020-03-27 00:04:42,360[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4f005a14] CLOSED! 
+2020-03-27 00:04:42,360[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:42,362[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d3d4b10] DONE
+2020-03-27 00:04:42,362[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:04:42,373[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d3d4b10] CLOSED! 
+2020-03-27 00:04:42,373[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:42,374[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4b75a148] DONE
+2020-03-27 00:04:42,375[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
+2020-03-27 00:04:42,376[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4b75a148] CLOSED! 
+2020-03-27 00:04:50,042[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215560
+2020-03-27 00:04:50,379[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215560, message=Message{messageId=1794, from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231489, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='/start', entities=[MessageEntity{type='bot_command', offset=0, length=6, url='null', user=null, language='null', text='null'}], captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:04:50,379[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[START] is: com.telegramBot.handler.SystemHandler@6534c31f
+2020-03-27 00:04:50,379[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for searchUser...
+2020-03-27 00:04:50,379[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:50,380[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2829f557] DONE
+2020-03-27 00:04:50,380[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2829f557] CLOSED! 
+2020-03-27 00:04:50,380[INFO ][MsgReciever     ][elegramBot.handler.SystemHandler] - Old user. ChatId = 582705161
+2020-03-27 00:04:50,380[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:50,380[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:50,381[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2fcb5e89] DONE
+2020-03-27 00:04:50,382[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2fcb5e89] CLOSED! 
+2020-03-27 00:04:50,382[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:50,382[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:50,383[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@49d2d5d9] DONE
+2020-03-27 00:04:50,383[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@49d2d5d9] CLOSED! 
+2020-03-27 00:04:50,383[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:04:50,383[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:50,384[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@abddbc7] DONE
+2020-03-27 00:04:50,385[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@abddbc7] CLOSED! 
+2020-03-27 00:04:50,385[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:04:50,385[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:50,386[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d59048a] DONE
+2020-03-27 00:04:50,386[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d59048a] CLOSED! 
+2020-03-27 00:04:50,386[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:04:50,386[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:04:50,387[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@189330be] DONE
+2020-03-27 00:04:50,387[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@189330be] CLOSED! 
+2020-03-27 00:05:13,631[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215561
+2020-03-27 00:05:14,394[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215561, message=Message{messageId=1797, from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231513, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='📈 Категории', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:05:14,394[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:05:14,394[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:05:14,394[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:14,395[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@47b05268] DONE
+2020-03-27 00:05:14,396[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@47b05268] CLOSED! 
+2020-03-27 00:05:14,396[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:05:14,396[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:14,397[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@23b7daba] DONE
+2020-03-27 00:05:14,397[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@23b7daba] CLOSED! 
+2020-03-27 00:05:14,397[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:05:14,397[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:14,398[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6eff712] DONE
+2020-03-27 00:05:14,398[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6eff712] CLOSED! 
+2020-03-27 00:05:14,398[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:05:14,398[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:14,399[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@77821b1] DONE
+2020-03-27 00:05:14,400[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@77821b1] CLOSED! 
+2020-03-27 00:05:14,400[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:05:14,400[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:14,400[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@429e0024] DONE
+2020-03-27 00:05:14,401[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@429e0024] CLOSED! 
+2020-03-27 00:05:45,560[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215562
+2020-03-27 00:05:45,645[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215562, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699612484005434', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1798, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231515, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='Меню категорий 
+ Какие категории вывести на экран?
+Чтобы ввести новую то введи 228 /новая категория/ ---> и она появится в списке', entities=[MessageEntity{type='bold', offset=84, length=15, url='null', user=null, language='null', text='null'}], captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Доходы', url='null', callbackData='incomeCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Расходы', url='null', callbackData='spanCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='spanCats', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:05:45,645[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== spanCats
+2020-03-27 00:05:45,645[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:05:45,645[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:45,646[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5f6160c7] DONE
+2020-03-27 00:05:45,647[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5f6160c7] CLOSED! 
+2020-03-27 00:05:45,647[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for getAllInCats...
+2020-03-27 00:05:45,647[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:45,648[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@264f4b5e] DONE
+2020-03-27 00:05:45,648[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@264f4b5e] CLOSED! 
+2020-03-27 00:05:45,648[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:05:45,649[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:45,649[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@607c838f] DONE
+2020-03-27 00:05:45,650[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@607c838f] CLOSED! 
+2020-03-27 00:05:45,650[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:45,651[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@52512084] DONE
+2020-03-27 00:05:45,651[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:05:45,664[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@52512084] CLOSED! 
+2020-03-27 00:05:53,360[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215563
+2020-03-27 00:05:53,666[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215563, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699611462005714', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1800, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231545, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='транспорт
+продукты
+ништяки
+одежда
+комуналка
+развлечения
+хобби
+подарки
+медицина
+налоги
+кредит', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Изменить', url='null', callbackData='changeCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Удалить', url='null', callbackData='deleteCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='changeCat', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:05:53,666[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== changeCat
+2020-03-27 00:05:53,666[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceWhat for users table...
+2020-03-27 00:05:53,666[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:53,667[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6e21551] DONE
+2020-03-27 00:05:53,668[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6e21551] CLOSED! 
+2020-03-27 00:05:53,668[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:53,669[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5a2bab68] DONE
+2020-03-27 00:05:53,669[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
+2020-03-27 00:05:53,679[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5a2bab68] CLOSED! 
+2020-03-27 00:05:53,679[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:05:53,679[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:53,680[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5e4f3b59] DONE
+2020-03-27 00:05:53,680[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5e4f3b59] CLOSED! 
+2020-03-27 00:05:53,680[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for getAllInCats...
+2020-03-27 00:05:53,680[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:05:53,681[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5c16514] DONE
+2020-03-27 00:05:53,682[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5c16514] CLOSED! 
+2020-03-27 00:06:04,523[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215564
+2020-03-27 00:06:04,686[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215564, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699611817615838', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1800, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231545, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='транспорт
+продукты
+ништяки
+одежда
+комуналка
+развлечения
+хобби
+подарки
+медицина
+налоги
+кредит', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Изменить', url='null', callbackData='changeCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Удалить', url='null', callbackData='deleteCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='cancel', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:06:04,686[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== cancel
+2020-03-27 00:06:04,686[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:04,686[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:04,687[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@131fa060] DONE
+2020-03-27 00:06:04,687[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@131fa060] CLOSED! 
+2020-03-27 00:06:04,688[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:04,688[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:04,688[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@14683980] DONE
+2020-03-27 00:06:04,689[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@14683980] CLOSED! 
+2020-03-27 00:06:04,689[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:04,690[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@33da5da7] DONE
+2020-03-27 00:06:04,690[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceDelete...
+2020-03-27 00:06:04,690[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@33da5da7] CLOSED! 
+2020-03-27 00:06:04,690[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:04,691[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3dbd770d] DONE
+2020-03-27 00:06:04,691[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:06:04,701[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3dbd770d] CLOSED! 
+2020-03-27 00:06:04,701[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:04,702[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@534fdc7a] DONE
+2020-03-27 00:06:04,702[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
+2020-03-27 00:06:04,711[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@534fdc7a] CLOSED! 
+2020-03-27 00:06:27,221[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215565
+2020-03-27 00:06:27,723[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215565, message=Message{messageId=1803, from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231586, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='432 testxz', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:06:27,723[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:06:27,724[INFO ][MsgReciever     ][Bot.dbWork.categories.InCategory] - Executing select statmt for searchInCat...
+2020-03-27 00:06:27,724[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:27,725[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@676819bf] DONE
+2020-03-27 00:06:27,725[WARN ][MsgReciever     ][Bot.dbWork.categories.InCategory] - standart categories result set is empty!!!!!!!!!! class com.telegramBot.dbWork.users.User
+2020-03-27 00:06:27,726[WARN ][MsgReciever     ][Bot.dbWork.categories.InCategory] - result set is empty!!!!!!!!!! class com.telegramBot.dbWork.users.User
+2020-03-27 00:06:27,726[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@676819bf] CLOSED! 
+2020-03-27 00:06:27,726[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for searchOutCat...
+2020-03-27 00:06:27,726[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:27,726[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@313b1f40] DONE
+2020-03-27 00:06:27,727[WARN ][MsgReciever     ][ot.dbWork.categories.OutCategory] - standart categories result set is empty!!!!!!!!!! class com.telegramBot.dbWork.users.User
+2020-03-27 00:06:27,727[WARN ][MsgReciever     ][ot.dbWork.categories.OutCategory] - result set is empty!!!!!!!!!! class com.telegramBot.dbWork.users.User
+2020-03-27 00:06:27,727[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@313b1f40] CLOSED! 
+2020-03-27 00:06:27,727[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:27,727[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:27,728[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1cbaa911] DONE
+2020-03-27 00:06:27,728[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1cbaa911] CLOSED! 
+2020-03-27 00:06:27,728[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:27,728[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:27,729[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@68ad4237] DONE
+2020-03-27 00:06:27,729[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@68ad4237] CLOSED! 
+2020-03-27 00:06:27,730[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:27,730[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:27,730[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4faf0b7c] DONE
+2020-03-27 00:06:27,731[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4faf0b7c] CLOSED! 
+2020-03-27 00:06:27,731[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:06:27,731[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:27,731[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2607ccd6] DONE
+2020-03-27 00:06:27,732[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2607ccd6] CLOSED! 
+2020-03-27 00:06:27,732[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:06:27,732[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:27,733[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6fbc0b26] DONE
+2020-03-27 00:06:27,733[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6fbc0b26] CLOSED! 
+2020-03-27 00:06:32,226[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215566
+2020-03-27 00:06:32,735[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215566, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699613676966735', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1804, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231589, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='Найдена новая категория! 
+Выберите куда её отнести!', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Расход', url='null', callbackData='span', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Доход', url='null', callbackData='income', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='span', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:06:32,735[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== span
+2020-03-27 00:06:32,735[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:32,736[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d02501c] DONE
+2020-03-27 00:06:32,736[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing insert statmt for new user
+2020-03-27 00:06:32,747[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d02501c] CLOSED! 
+2020-03-27 00:06:32,747[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:32,749[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5a41522b] DONE
+2020-03-27 00:06:32,749[INFO ][MsgReciever     ][telegramBot.dbWork.heap.HeapWork] - Executing insert statmt for new row in heap
+2020-03-27 00:06:32,757[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5a41522b] CLOSED! 
+2020-03-27 00:06:32,758[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:32,758[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:32,759[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@42b844c9] DONE
+2020-03-27 00:06:32,760[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@42b844c9] CLOSED! 
+2020-03-27 00:06:32,760[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:32,760[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:32,761[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4d528283] DONE
+2020-03-27 00:06:32,762[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4d528283] CLOSED! 
+2020-03-27 00:06:37,065[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215567
+2020-03-27 00:06:37,763[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215567, message=Message{messageId=1806, from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231596, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='📈 Категории', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:06:37,763[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:06:37,763[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:37,763[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:37,764[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@322fa985] DONE
+2020-03-27 00:06:37,765[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@322fa985] CLOSED! 
+2020-03-27 00:06:37,765[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:37,765[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:37,766[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@62af75e1] DONE
+2020-03-27 00:06:37,766[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@62af75e1] CLOSED! 
+2020-03-27 00:06:37,766[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:37,766[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:37,767[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6231eb71] DONE
+2020-03-27 00:06:37,767[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6231eb71] CLOSED! 
+2020-03-27 00:06:37,767[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:06:37,767[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:37,768[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3b2e3b2e] DONE
+2020-03-27 00:06:37,769[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3b2e3b2e] CLOSED! 
+2020-03-27 00:06:37,769[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:06:37,769[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:37,770[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@7402de4f] DONE
+2020-03-27 00:06:37,770[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@7402de4f] CLOSED! 
+2020-03-27 00:06:40,030[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215568
+2020-03-27 00:06:40,771[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215568, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699611802402296', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1807, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231597, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='Меню категорий 
+ Какие категории вывести на экран?
+Чтобы ввести новую то введи 228 /новая категория/ ---> и она появится в списке', entities=[MessageEntity{type='bold', offset=84, length=15, url='null', user=null, language='null', text='null'}], captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Доходы', url='null', callbackData='incomeCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Расходы', url='null', callbackData='spanCats', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='spanCats', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:06:40,771[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== spanCats
+2020-03-27 00:06:40,771[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:40,771[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:40,772[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d1bad53] DONE
+2020-03-27 00:06:40,773[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6d1bad53] CLOSED! 
+2020-03-27 00:06:40,773[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for getAllInCats...
+2020-03-27 00:06:40,773[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:40,774[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@9ca9e2] DONE
+2020-03-27 00:06:40,774[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@9ca9e2] CLOSED! 
+2020-03-27 00:06:40,774[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:40,774[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:40,775[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4a210594] DONE
+2020-03-27 00:06:40,776[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4a210594] CLOSED! 
+2020-03-27 00:06:40,776[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:40,776[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@28b34a39] DONE
+2020-03-27 00:06:40,776[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:06:40,787[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@28b34a39] CLOSED! 
+2020-03-27 00:06:44,528[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215569
+2020-03-27 00:06:44,788[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215569, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699613043879654', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1809, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231601, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='транспорт
+продукты
+ништяки
+одежда
+комуналка
+развлечения
+хобби
+подарки
+медицина
+налоги
+кредит
+testxz', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Изменить', url='null', callbackData='changeCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Удалить', url='null', callbackData='deleteCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='deleteCat', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:06:44,788[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== deleteCat
+2020-03-27 00:06:44,788[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceWhat for users table...
+2020-03-27 00:06:44,788[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:44,792[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@18721b49] DONE
+2020-03-27 00:06:44,793[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@18721b49] CLOSED! 
+2020-03-27 00:06:44,793[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:44,794[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@7dc4721c] DONE
+2020-03-27 00:06:44,794[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceDelete...
+2020-03-27 00:06:44,807[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@7dc4721c] CLOSED! 
+2020-03-27 00:06:44,807[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:44,807[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:44,809[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3f0bd595] DONE
+2020-03-27 00:06:44,810[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3f0bd595] CLOSED! 
+2020-03-27 00:06:44,810[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing select statmt for getAllInCats...
+2020-03-27 00:06:44,810[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:44,812[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@ddba2cf] DONE
+2020-03-27 00:06:44,813[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@ddba2cf] CLOSED! 
+2020-03-27 00:06:48,244[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215570
+2020-03-27 00:06:48,815[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215570, message=Message{messageId=1811, from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231607, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='testxz', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=null}, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:06:48,815[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Handler for command[NONE] not Set. Return DefaultHandler
+2020-03-27 00:06:48,815[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:48,815[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,816[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5fb486e] DONE
+2020-03-27 00:06:48,816[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5fb486e] CLOSED! 
+2020-03-27 00:06:48,817[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceChange for users table...
+2020-03-27 00:06:48,817[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,817[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5bf18e5f] DONE
+2020-03-27 00:06:48,818[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5bf18e5f] CLOSED! 
+2020-03-27 00:06:48,818[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceDelete for users table...
+2020-03-27 00:06:48,818[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,819[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3ab75fc9] DONE
+2020-03-27 00:06:48,819[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@3ab75fc9] CLOSED! 
+2020-03-27 00:06:48,819[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,820[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6a2a5f8a] DONE
+2020-03-27 00:06:48,820[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceDelete...
+2020-03-27 00:06:48,830[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6a2a5f8a] CLOSED! 
+2020-03-27 00:06:48,830[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceWhat for users table...
+2020-03-27 00:06:48,830[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,831[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@354dc299] DONE
+2020-03-27 00:06:48,832[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@354dc299] CLOSED! 
+2020-03-27 00:06:48,832[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,833[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@62193119] DONE
+2020-03-27 00:06:48,833[INFO ][MsgReciever     ][ot.dbWork.categories.OutCategory] - Executing update statmt for cat
+2020-03-27 00:06:48,848[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@62193119] CLOSED! 
+2020-03-27 00:06:48,848[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,849[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@62507384] DONE
+2020-03-27 00:06:48,849[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:06:48,856[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@62507384] CLOSED! 
+2020-03-27 00:06:48,856[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,857[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5a3eb64b] DONE
+2020-03-27 00:06:48,857[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
+2020-03-27 00:06:48,857[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@5a3eb64b] CLOSED! 
+2020-03-27 00:06:48,857[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:48,857[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,858[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@13cee9f] DONE
+2020-03-27 00:06:48,858[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@13cee9f] CLOSED! 
+2020-03-27 00:06:48,859[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:06:48,859[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:06:48,859[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2a868658] DONE
+2020-03-27 00:06:48,860[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2a868658] CLOSED! 
+2020-03-27 00:07:49,531[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215571
+2020-03-27 00:07:49,879[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215571, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699611456772309', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1809, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231601, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='транспорт
+продукты
+ништяки
+одежда
+комуналка
+развлечения
+хобби
+подарки
+медицина
+налоги
+кредит
+testxz', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Изменить', url='null', callbackData='changeCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Удалить', url='null', callbackData='deleteCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='changeCat', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:07:49,879[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== changeCat
+2020-03-27 00:07:49,879[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getServiceWhat for users table...
+2020-03-27 00:07:49,879[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:49,880[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4b2b1cdf] DONE
+2020-03-27 00:07:49,881[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@4b2b1cdf] CLOSED! 
+2020-03-27 00:07:49,881[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:49,882[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6408771f] DONE
+2020-03-27 00:07:49,882[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
+2020-03-27 00:07:49,891[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@6408771f] CLOSED! 
+2020-03-27 00:07:49,891[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:07:49,891[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:49,892[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2a63517] DONE
+2020-03-27 00:07:49,893[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@2a63517] CLOSED! 
+2020-03-27 00:07:50,996[INFO ][elegram Executor][         com.telegramBot.bot.Bot] - Receive new Update. updateID: 387215572
+2020-03-27 00:07:51,894[INFO ][MsgReciever     ][mBot.threadsWork.MessageReciever] - Update recieved: Update{updateId=387215572, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=CallbackQuery{id='2502699611837737532', from=User{id=582705161, firstName='R0st1slav', isBot=false, lastName='null', userName='null', languageCode='ru', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, message=Message{messageId=1809, from=User{id=958126512, firstName='financeTOGUbot', isBot=true, lastName='null', userName='financeTOGUbot', languageCode='null', canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null}, date=1585231601, chat=Chat{id=582705161, type='private', title='null', firstName='R0st1slav', lastName='null', userName='null', allMembersAreAdministrators=null, photo=null, description='null', inviteLink='null', pinnedMessage=null, stickerSetName='null', canSetStickerSet=null, permissions=null, slowModeDelay=null}, forwardFrom=null, forwardFromChat=null, forwardDate=null, text='транспорт
+продукты
+ништяки
+одежда
+комуналка
+развлечения
+хобби
+подарки
+медицина
+налоги
+кредит
+testxz', entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=null, leftChatMember=null, newChatTitle='null', newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption='null', superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=null, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature='null', forwardSignature='null', mediaGroupId='null', connectedWebsite='null', passportData=null, forwardSenderName='null', poll=null, replyMarkup=InlineKeyboardMarkup{inline_keyboard=[[InlineKeyboardButton{text='Изменить', url='null', callbackData='changeCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}, InlineKeyboardButton{text='Удалить', url='null', callbackData='deleteCat', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}], [InlineKeyboardButton{text='Отмена', url='null', callbackData='cancel', callbackGame=null, switchInlineQuery='null', switchInlineQueryCurrentChat='null', pay=null, loginUrl=null}]]}}, inlineMessageId='null', data='cancel', gameShortName='null', chatInstance='-2566465860908811435'}, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null}
+2020-03-27 00:07:51,894[WARN ][MsgReciever     ][mBot.threadsWork.MessageReciever] - CallbackQuery !!!! ==== cancel
+2020-03-27 00:07:51,894[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:07:51,894[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:51,896[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1c0cc75d] DONE
+2020-03-27 00:07:51,897[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1c0cc75d] CLOSED! 
+2020-03-27 00:07:51,897[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing select statmt for getLanguage for users table...
+2020-03-27 00:07:51,898[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:51,899[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@fd2ede7] DONE
+2020-03-27 00:07:51,900[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@fd2ede7] CLOSED! 
+2020-03-27 00:07:51,900[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:51,901[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@28c5d38d] DONE
+2020-03-27 00:07:51,901[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceDelete...
+2020-03-27 00:07:51,902[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@28c5d38d] CLOSED! 
+2020-03-27 00:07:51,902[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:51,904[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1bf8450f] DONE
+2020-03-27 00:07:51,904[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceWhat...
+2020-03-27 00:07:51,905[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@1bf8450f] CLOSED! 
+2020-03-27 00:07:51,905[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Start the db connection!
+2020-03-27 00:07:51,906[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@61b44f02] DONE
+2020-03-27 00:07:51,907[INFO ][MsgReciever     ][om.telegramBot.dbWork.users.User] - Executing update statmt for setServiceChange...
+2020-03-27 00:07:51,919[INFO ][MsgReciever     ][     com.telegramBot.dbWork.Conn] - Connection [org.sqlite.jdbc4.JDBC4Connection@61b44f02] CLOSED! 
