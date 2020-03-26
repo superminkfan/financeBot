@@ -152,11 +152,11 @@ public class OutCategory {
             log.error("No class found!" + e.getLocalizedMessage());
         }
         log.info("Executing update statmt for cat");
-        Conn.statmt.execute("UPDATE outCat set nameCat = " + newNameCat + " WHERE nameCat = " + oldNameCat +
-                " and " +
+        Conn.statmt.execute("UPDATE outCat set nameCat = '" + newNameCat + "' WHERE nameCat = '" + oldNameCat +
+                "' and " +
                 " chatid = " + chatId  + ";");
-        Conn.statmt.execute("UPDATE heap set nameCat = " + newNameCat + " WHERE nameCat = " + oldNameCat +
-                " and " +
+        Conn.statmt.execute("UPDATE heap set nameCat = '" + newNameCat + "' WHERE nameCat = '" + oldNameCat +
+                "' and " +
                 " chatid = " + chatId  + ";");
 
         try {
@@ -176,8 +176,8 @@ public class OutCategory {
             log.error("No class found!" + e.getLocalizedMessage());
         }
         log.info("Executing update statmt for cat");
-        Conn.statmt.execute("DELETE outCat WHERE nameCat = " + nameCat + " and chatid = " + chatId +  ";");
-        Conn.statmt.execute("DELETE heap WHERE nameCat = " + nameCat + " and chatid = " + chatId +  ";");
+        Conn.statmt.execute("DELETE outCat WHERE nameCat = '" + nameCat + "' and chatid = " + chatId +  ";");
+        Conn.statmt.execute("DELETE heap   WHERE nameCat = '" + nameCat + "' and chatid = " + chatId +  ";");
 
         try {
             Conn.CloseDB();

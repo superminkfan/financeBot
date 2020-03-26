@@ -2,8 +2,8 @@ package com.telegramBot.handler;
 
 import com.telegramBot.bot.Bot;
 import com.telegramBot.bot.Buttons;
-import com.telegramBot.dbWork.categories.InCat;
-import com.telegramBot.dbWork.categories.OutCat;
+import com.telegramBot.dbWork.categories.InCategory;
+import com.telegramBot.dbWork.categories.OutCategory;
 import com.telegramBot.dbWork.users.User;
 import org.apache.log4j.Logger;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -40,9 +40,9 @@ public class ChangeDeleteHandler extends AbstractHandler  {
         ArrayList list = new ArrayList();
         try {
             if (service == 2)
-                list = OutCat.getAllOutCats(chatId);
+                list = OutCategory.getAllOutCats(chatId);
             else if (service == 1)
-                list = InCat.getAllInCats(chatId);
+                list = InCategory.getAllInCats(chatId);
         } catch (SQLException e) {
             log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
             return "";
@@ -64,9 +64,9 @@ public class ChangeDeleteHandler extends AbstractHandler  {
         ArrayList list = new ArrayList();
         try {
             if (service == 2)
-                list = OutCat.getAllOutCats(chatId);
+                list = OutCategory.getAllOutCats(chatId);
             else if (service == 1)
-                list = InCat.getAllInCats(chatId);
+                list = InCategory.getAllInCats(chatId);
         } catch (SQLException e) {
             log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
             return "";

@@ -209,7 +209,7 @@ public class MessageReciever implements Runnable {
                             try {
                                 System.out.println("v tempe seychas " + this.tempWhat);
                                 System.out.println("v inpute seychas " + inputText);
-                                InCat.changeInCat(chatId,this.tempWhat , inputText);
+                                InCategory.changeInCat(chatId,this.tempWhat , inputText);
                             } catch (SQLException e) {
                                 log.error("SQL error " +e.getMessage() );
                                 e.printStackTrace();
@@ -227,7 +227,7 @@ public class MessageReciever implements Runnable {
                                 System.out.println("v tempe seychas " + this.tempWhat);
                                 System.out.println("v inpute seychas " + inputText);
 
-                                OutCat.changeOutCat(chatId,this.tempWhat , inputText);
+                                OutCategory.changeOutCat(chatId,this.tempWhat , inputText);
                             } catch (SQLException e) {
                                 log.error("SQL error " +e.getMessage() );
                                 e.printStackTrace();
@@ -257,7 +257,7 @@ public class MessageReciever implements Runnable {
                         if (serviceWhat == 1)
                         {
                             try {
-                                InCat.deleteInCat(chatId , inputText);
+                                InCategory.deleteInCat(chatId , inputText);
                             } catch (SQLException e) {
                                 log.error("SQL error " +e.getMessage() );
                                 e.printStackTrace();
@@ -271,7 +271,7 @@ public class MessageReciever implements Runnable {
                         if (serviceWhat == 2)
                         {
                             try {
-                               OutCat.deleteOutCat(chatId,inputText);
+                               OutCategory.deleteOutCat(chatId,inputText);
                               }
                             catch (SQLException e)
                             {
@@ -444,7 +444,7 @@ public class MessageReciever implements Runnable {
                     bot.sendQueue.add(sendMessage);
                     ArrayList list = new ArrayList();
                     try {
-                        list = InCat.getAllInCats(chatId);
+                        list = InCategory.getAllInCats(chatId);
                     } catch (SQLException e) {
                         log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
                         return;
@@ -473,7 +473,7 @@ public class MessageReciever implements Runnable {
                     bot.sendQueue.add(sendMessage);
                     ArrayList list;
                     try {
-                        list = OutCat.getAllOutCats(chatId);
+                        list = OutCategory.getAllOutCats(chatId);
                     } catch (SQLException e) {
                         log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
                         return;
