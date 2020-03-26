@@ -444,7 +444,7 @@ public class MessageReciever implements Runnable {
                     bot.sendQueue.add(sendMessage);
                     ArrayList list = new ArrayList();
                     try {
-                        list = InCategory.getAllInCats(chatId);
+                        list = InCategory.getAllInCats(chatId , 1);
                     } catch (SQLException e) {
                         log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
                         return;
@@ -473,7 +473,7 @@ public class MessageReciever implements Runnable {
                     bot.sendQueue.add(sendMessage);
                     ArrayList list;
                     try {
-                        list = OutCategory.getAllOutCats(chatId);
+                        list = OutCategory.getAllOutCats(chatId , 1);
                     } catch (SQLException e) {
                         log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
                         return;

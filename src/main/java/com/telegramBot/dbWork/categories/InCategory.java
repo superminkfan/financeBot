@@ -69,7 +69,7 @@ public class InCategory {
         return true;
     }
 
-    public static ArrayList getAllInCats(Long chatId ) throws SQLException {
+    public static ArrayList getAllInCats(Long chatId, int i ) throws SQLException {
         log.info("Executing select statmt for getAllInCats...");
 
         try {
@@ -82,10 +82,16 @@ public class InCategory {
             log.error("No class found!" + e.getLocalizedMessage());
         }
 
-
-        ResultSet resSet = Conn.statmt.executeQuery(
-                "SELECT * FROM inCat WHERE chatid = " + chatId + "  OR  chatid = 1 ;");
-
+        ResultSet resSet = null;
+        if (i ==1) {
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM inCat WHERE chatid = " + chatId + "  OR  chatid = 1 ;");
+        }
+        else  if(i == 2)
+        {
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM inCat WHERE chatid = " + chatId + ";");
+        }
         if (resSet.isClosed())
         {
             log.warn("result set is empty!!!!!!!!!! " + User.class.toString());

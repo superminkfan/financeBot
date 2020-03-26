@@ -40,17 +40,35 @@ public class ChangeDeleteHandler extends AbstractHandler  {
         ArrayList list = new ArrayList();
         try {
             if (service == 2)
-                list = OutCategory.getAllOutCats(chatId);
+                list = OutCategory.getAllOutCats(chatId , 2);
             else if (service == 1)
-                list = InCategory.getAllInCats(chatId);
+                list = InCategory.getAllInCats(chatId , 2);
         } catch (SQLException e) {
             log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
             return "";
         }
 
+try {
 
-        Buttons.setKeyBoardCategoriesNewTest(sendMessage , chatId , list , bot);
-        bot.sendQueue.add(sendMessage);
+
+    Buttons.setKeyBoardCategoriesNewTest(sendMessage, chatId, list, bot);
+    bot.sendQueue.add(sendMessage);
+}
+catch (NullPointerException e)
+{
+    log.error("pustoy spisok");
+    SendMessage sendMessage1 = new SendMessage();
+    sendMessage1.setChatId(chatId);
+    String lang = User.getLanguage(chatId);
+    if (lang.equals("russian"))
+    sendMessage1.setText("Список категорий для удаления пуст!");
+    else
+        sendMessage1.setText("Category list for delete is empty!");
+Buttons.setButtonsMain(sendMessage1,chatId);
+    bot.sendQueue.add(sendMessage1);
+
+    User.setServiceDelete(chatId , 0);
+}
 
         return "";
     }
@@ -64,18 +82,34 @@ public class ChangeDeleteHandler extends AbstractHandler  {
         ArrayList list = new ArrayList();
         try {
             if (service == 2)
-                list = OutCategory.getAllOutCats(chatId);
+                list = OutCategory.getAllOutCats(chatId , 2);
             else if (service == 1)
-                list = InCategory.getAllInCats(chatId);
+                list = InCategory.getAllInCats(chatId , 2);
         } catch (SQLException e) {
             log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
             return "";
         }
 
+try {
+    Buttons.setKeyBoardCategoriesNewTest(sendMessage, chatId, list, bot);
+    bot.sendQueue.add(sendMessage);
+}
+catch (NullPointerException e)
+{
+    log.error("pustoy spisok");
+    SendMessage sendMessage1 = new SendMessage();
+    sendMessage1.setChatId(chatId);
+    String lang = User.getLanguage(chatId);
+    if (lang.equals("russian"))
+        sendMessage1.setText("Список категорий для изменения пуст!");
+    else
+        sendMessage1.setText("Category list for change is empty!");
+    Buttons.setButtonsMain(sendMessage1,chatId);
 
-        Buttons.setKeyBoardCategoriesNewTest(sendMessage , chatId , list , bot);
-        bot.sendQueue.add(sendMessage);
+    bot.sendQueue.add(sendMessage1);
 
+    User.setServiceChange(chatId , 0);
+}
         return "";
 
     }
