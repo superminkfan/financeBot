@@ -8,8 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class OutCat {
-    private static final Logger log = Logger.getLogger(OutCat.class);
+public class OutCategory {
+    private static final Logger log = Logger.getLogger(OutCategory.class);
 
     public static boolean searchOutCat(Long chatId , String maybeNameCat) throws SQLException {
         log.info("Executing select statmt for searchOutCat...");

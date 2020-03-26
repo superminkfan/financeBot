@@ -3,14 +3,13 @@ package com.telegramBot.dbWork.categories;
 import com.telegramBot.dbWork.Conn;
 import com.telegramBot.dbWork.users.User;
 import org.apache.log4j.Logger;
-import org.checkerframework.checker.units.qual.A;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class InCat {
-    private static final Logger log = Logger.getLogger(InCat.class);
+public class InCategory {
+    private static final Logger log = Logger.getLogger(InCategory.class);
 
     public static boolean searchInCat(Long chatId , String maybeNameCat) throws SQLException {
         log.info("Executing select statmt for searchInCat...");

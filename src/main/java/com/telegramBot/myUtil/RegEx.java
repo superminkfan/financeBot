@@ -9,40 +9,18 @@ public class RegEx {
     public static boolean checkWithRegExp(String inputString){
         Pattern p = Pattern.compile("^\\d{1,10}([,\\s])+[a-zA-Z \\u0400-\\u04FF]{1,15}");
         Pattern p1 = Pattern.compile("^[a-zA-Z \\u0400-\\u04FF]{1,15}([,\\s])+\\d{1,10}");
-        if (p.matcher(inputString).matches())
-        {
-            return true;
-        }
-        else if ( p1.matcher(inputString).matches())
-        {
-            return true;
-        }
+        return p.matcher(inputString).matches() || p1.matcher(inputString).matches();
 
-        return false;
     }
 
-    public static boolean yoloRegExp(String inputString){
+    public static boolean checkRegExpYolo(String inputString){
         Pattern p1 = Pattern.compile("^[/][a-zA-Z]{1,4}([,\\s])+\\d{1,10}");
 
-        if ( p1.matcher(inputString).matches())
-        {
-            return true;
-        }
+        return p1.matcher(inputString).matches();
 
-        return false;
-    }
-    public static boolean yaSkazalYolo(String inputString){
-        Pattern p1 = Pattern.compile("^[/][a-zA-Z]{1,4}");
-
-        if ( p1.matcher(inputString).matches())
-        {
-            return true;
-        }
-
-        return false;
     }
 
-    public static HashMap  delimNaPopalam(String inputString){
+    public static HashMap devideByHalf(String inputString){
         float cost = 0;
         String action = "";
 

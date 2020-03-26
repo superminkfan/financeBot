@@ -5,8 +5,8 @@ import com.telegramBot.bot.Buttons;
 import com.telegramBot.command.Command;
 import com.telegramBot.command.ParsedCommand;
 import com.telegramBot.command.Parser;
-import com.telegramBot.dbWork.categories.InCat;
-import com.telegramBot.dbWork.categories.OutCat;
+import com.telegramBot.dbWork.categories.InCategory;
+import com.telegramBot.dbWork.categories.OutCategory;
 import com.telegramBot.dbWork.heap.HeapWork;
 import com.telegramBot.dbWork.users.User;
 import com.telegramBot.handler.*;
@@ -26,12 +26,12 @@ public class MessageReciever implements Runnable {
     private final int WAIT_FOR_NEW_MESSAGE_DELAY = 1000;
     private final String END_LINE = "\n";
 
-    private String kostyl1="";
-    private float kostyl2=0;
-    private int kostylDay = 0;
-    private int kostylMounth = 0;
-    private int kostylYear = 0;
-    private String kostylMaster = "none";
+    private String temp_String ="";
+    private float temp_Int =0;
+    private int Day = 0;
+    private int Month = 0;
+    private int Year = 0;
+    private String Master = "none";
     private  String tempWhat;
 
 
@@ -83,14 +83,14 @@ public class MessageReciever implements Runnable {
                     if (RegEx.checkWithRegExp(inputText))
                     {
 
-                        HashMap hashMap = RegEx.delimNaPopalam(inputText);
+                        HashMap hashMap = RegEx.devideByHalf(inputText);
                         String action = (String) hashMap.get("action");
                         action = action.replaceAll(" " , "");
                         float amount = (Float) hashMap.get("amount");
                         System.out.println("то шо ввёл пользователь _"  + action + "_  " + amount);
                         try {
 
-                            if (InCat.searchInCat(chatId,action))
+                            if (InCategory.searchInCat(chatId,action))
                             {
                                 HeapWork.addNewRow(chatId,amount,0 , action);
 
@@ -98,7 +98,7 @@ public class MessageReciever implements Runnable {
                                 Buttons.setButtonsMain(sendMessage2, chatId);
                                 bot.sendQueue.add(sendMessage2);
                             }
-                            else if (OutCat.searchOutCat(chatId, action))
+                            else if (OutCategory.searchOutCat(chatId, action))
                             {
                                 HeapWork.addNewRow(chatId,amount,1 , action);
 
@@ -108,8 +108,8 @@ public class MessageReciever implements Runnable {
                             }
                             else
                             {
-                                kostyl1 = action;
-                                kostyl2 = amount;
+                                temp_String = action;
+                                temp_Int = amount;
                                 SendMessage sendMessage2 = Bot.doSendMsg(chatId,"newCat");
                                 Buttons.setInlineKeyBoardNewCat(sendMessage2, chatId);
                                 bot.sendQueue.add(sendMessage2);
@@ -118,21 +118,21 @@ public class MessageReciever implements Runnable {
                         }
                         catch (SQLException e)
                         {
-                            log.error("SQL palundra!!! " + e.getLocalizedMessage());
+                            log.error("SQL error!!! " + e.getLocalizedMessage());
                         }
 
                     }
 
-
+                    //analyzeForUpdateType(update);
                     String lang = User.getLanguage(chatId);
 
 
-                    if (kostylDay == 1 || kostylMounth == 1 || kostylYear == 1 || RegEx.yoloRegExp(inputText))//вот тут будет еще условие с регулярными выражениями
+                    if (Day == 1 || Month == 1 || Year == 1 || RegEx.checkRegExpYolo(inputText))
                     {
-                        if (RegEx.yoloRegExp(inputText))
+                        if (RegEx.checkRegExpYolo(inputText))
                         {
                             System.out.println("Proshel vtoroy regExp!");
-                            HashMap hashMap = RegEx.delimNaPopalam(inputText);
+                            HashMap hashMap = RegEx.devideByHalf(inputText);
                             String master = (String)hashMap.get("action");
                             master.replaceAll(" ", "");
                             float lim = (float)hashMap.get("amount");
@@ -146,17 +146,17 @@ public class MessageReciever implements Runnable {
 
                         try {
                             float lim = Float.valueOf(inputText);
-                            User.setMasterLim(chatId, kostylMaster, lim);
+                            User.setMasterLim(chatId, Master, lim);
                             SendMessage sendMessage = Bot.doSendMsg(chatId,"budgetOk");
                             Buttons.setButtonsMain(sendMessage , chatId);
                             bot.sendQueue.add(sendMessage);
-                            kostylMaster = "none";
-                            kostylDay = 0;
-                            kostylMounth = 0;
-                            kostylYear = 0;
+                            Master = "none";
+                            Day = 0;
+                            Month = 0;
+                            Year = 0;
 
                         } catch (NumberFormatException e) {
-                            log.warn("hui na rul`");
+                            log.warn("Wrong format");
                         }
                     }
 
@@ -342,22 +342,22 @@ public class MessageReciever implements Runnable {
                 {
                     ChangeMasterLimitHandler wat = new ChangeMasterLimitHandler(bot);
                     wat.operate(chatId,"day");
-                    kostylDay = 1;
-                    kostylMaster = "day";
+                    Day = 1;
+                    Master = "day";
                 }
                 else if (calBack.equals("changeMounthLim"))
                 {
                     ChangeMasterLimitHandler wat = new ChangeMasterLimitHandler(bot);
                     wat.operate(chatId,"month");
-                    kostylMounth = 1;
-                    kostylMaster = "month";
+                    Month = 1;
+                    Master = "month";
                 }
                 else if (calBack.equals("changeYearLim"))
                 {
                     ChangeMasterLimitHandler wat = new ChangeMasterLimitHandler(bot);
                     wat.operate(chatId,"year");
-                    kostylYear = 1;
-                    kostylMaster = "year";
+                    Year = 1;
+                    Master = "year";
                 }
 
                 else if (calBack.equals("changeLimit"))
@@ -369,21 +369,21 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("span"))
                 {
                     try {
-                        int w = OutCat.addNewCat(chatId,kostyl1);
+                        int w = OutCategory.addNewCat(chatId, temp_String);
 
                         if (w == 1)
                         {
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat1");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
                         }
                         else {
-                            HeapWork.addNewRow(chatId,kostyl2,1,kostyl1);
+                            HeapWork.addNewRow(chatId, temp_Int,1, temp_String);
 
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
@@ -396,21 +396,21 @@ public class MessageReciever implements Runnable {
                 else if (calBack.equals("income"))
                 {
                     try {
-                        int w = InCat.addNewCat(chatId,kostyl1);
+                        int w = InCategory.addNewCat(chatId, temp_String);
 
                         if (w == 1)
                         {
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat1");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
                         }
                         else {
-                            HeapWork.addNewRow(chatId,kostyl2,0,kostyl1);
+                            HeapWork.addNewRow(chatId, temp_Int,0, temp_String);
 
-                            kostyl1 = "";
-                            kostyl2 = 0;
+                            temp_String = "";
+                            temp_Int = 0;
                             SendMessage sendMessage = Bot.doSendMsg(chatId, "newCatWat");
                             Buttons.setButtonsMain(sendMessage, chatId);
                             bot.sendQueue.add(sendMessage);
@@ -429,8 +429,8 @@ public class MessageReciever implements Runnable {
                     User.setServiceWhat(chatId , 0);
                     User.setServiceChange(chatId , 0);
                     bot.sendQueue.add(sendMessage);
-                    kostyl1 = "";
-                    kostyl2 = 0;
+                    temp_String = "";
+                    temp_Int = 0;
                 }
 /**
  * вот от сюда новое
