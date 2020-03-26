@@ -28,10 +28,10 @@ public class MessageReciever implements Runnable {
 
     private String kostyl1="";
     private float kostyl2=0;
-    private int kostylDay = 0;
-    private int kostylMounth = 0;
-    private int kostylYear = 0;
-    private String kostylMaster = "none";
+    private int Day = 0;
+    private int Month = 0;
+    private int Year = 0;
+    private String Master = "none";
 
 
     private Bot bot;
@@ -121,7 +121,7 @@ public class MessageReciever implements Runnable {
                     String lang = User.getLanguage(chatId);
 
 
-                    if (kostylDay == 1 || kostylMounth == 1 || kostylYear == 1 || RegEx.yoloRegExp(inputText))//вот тут будет еще условие с регулярными выражениями
+                    if (Day == 1 || Month == 1 || Year == 1 || RegEx.yoloRegExp(inputText))//вот тут будет еще условие с регулярными выражениями
                     {
                         if (RegEx.yoloRegExp(inputText))
                         {
@@ -140,14 +140,14 @@ public class MessageReciever implements Runnable {
 
                         try {
                             float lim = Float.valueOf(inputText);
-                            User.setMasterLim(chatId, kostylMaster, lim);
+                            User.setMasterLim(chatId, Master, lim);
                             SendMessage sendMessage = Bot.doSendMsg(chatId,"budgetOk");
                             Buttons.setButtonsMain(sendMessage , chatId);
                             bot.sendQueue.add(sendMessage);
-                            kostylMaster = "none";
-                            kostylDay = 0;
-                            kostylMounth = 0;
-                            kostylYear = 0;
+                            Master = "none";
+                            Day = 0;
+                            Month = 0;
+                            Year = 0;
 
                         } catch (NumberFormatException e) {
                             log.warn("hui na rul`");
@@ -237,22 +237,22 @@ public class MessageReciever implements Runnable {
                 {
                     ChangeMasterLimitHandler wat = new ChangeMasterLimitHandler(bot);
                     wat.operate(chatId,"day");
-                    kostylDay = 1;
-                    kostylMaster = "day";
+                    Day = 1;
+                    Master = "day";
                 }
                 else if (calBack.equals("changeMounthLim"))
                 {
                     ChangeMasterLimitHandler wat = new ChangeMasterLimitHandler(bot);
                     wat.operate(chatId,"month");
-                    kostylMounth = 1;
-                    kostylMaster = "month";
+                    Month = 1;
+                    Master = "month";
                 }
                 else if (calBack.equals("changeYearLim"))
                 {
                     ChangeMasterLimitHandler wat = new ChangeMasterLimitHandler(bot);
                     wat.operate(chatId,"year");
-                    kostylYear = 1;
-                    kostylMaster = "year";
+                    Year = 1;
+                    Master = "year";
                 }
 
                 else if (calBack.equals("changeLimit"))

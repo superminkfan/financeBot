@@ -27,12 +27,6 @@ public class ChangeMasterLimitHandler   {
 
         bot.sendQueue.add(sendMessage);
 
-
-
-
-
-
-
         return "";
     }
 }
