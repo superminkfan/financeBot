@@ -120,9 +120,9 @@ public class MessageReciever implements Runnable {
                     String lang = User.getLanguage(chatId);
 
 
-                    if (Day == 1 || Month == 1 || Year == 1 || RegEx.checkRegExp(inputText))
+                    if (Day == 1 || Month == 1 || Year == 1 || RegEx.checkRegExpYolo(inputText))
                     {
-                        if (RegEx.checkRegExp(inputText))
+                        if (RegEx.checkRegExpYolo(inputText))
                         {
                             System.out.println("Proshel vtoroy regExp!");
                             HashMap hashMap = RegEx.devideByHalf(inputText);
@@ -149,7 +149,7 @@ public class MessageReciever implements Runnable {
                             Year = 0;
 
                         } catch (NumberFormatException e) {
-                            log.warn("hui na rul`");
+                            log.warn("Wrong format");
                         }
                     }
 

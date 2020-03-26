@@ -13,7 +13,7 @@ public class RegEx {
 
     }
 
-    public static boolean checkRegExp(String inputString){
+    public static boolean checkRegExpYolo(String inputString){
         Pattern p1 = Pattern.compile("^[/][a-zA-Z]{1,4}([,\\s])+\\d{1,10}");
 
         return p1.matcher(inputString).matches();
