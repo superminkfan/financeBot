@@ -32,6 +32,7 @@ public class MessageReciever implements Runnable {
     private int kostylMounth = 0;
     private int kostylYear = 0;
     private String kostylMaster = "none";
+    private  String tempWhat;
 
 
     private Bot bot;
@@ -71,8 +72,13 @@ public class MessageReciever implements Runnable {
             if (update.hasMessage()) {
                 if (update.getMessage().hasText()) {
 
+
+                    analyzeForUpdateType(update);
+
+
                     String inputText = update.getMessage().getText();
                     Long chatId = update.getMessage().getChatId();
+
 
                     if (RegEx.checkWithRegExp(inputText))
                     {
@@ -117,7 +123,7 @@ public class MessageReciever implements Runnable {
 
                     }
 
-                    analyzeForUpdateType(update);
+
                     String lang = User.getLanguage(chatId);
 
 
@@ -182,6 +188,105 @@ public class MessageReciever implements Runnable {
                     }
 
 
+
+                    int serviceChange = User.getServiceChange(chatId);
+                    if (serviceChange == 1)
+                    {
+                        SendMessage sendMessage1 = Bot.doSendMsg(chatId,"goChange");
+                        bot.sendQueue.add(sendMessage1);
+                        User.setServiceChange(chatId , 2);
+
+                        System.out.println("v temp zavisivayu " + inputText);
+                        this.tempWhat = inputText;
+
+                    }
+
+                    else if (serviceChange == 2)
+                    {
+                        int serviceWhat = User.getServiceWhat(chatId);
+                        if (serviceWhat == 1)
+                        {
+                            try {
+                                System.out.println("v tempe seychas " + this.tempWhat);
+                                System.out.println("v inpute seychas " + inputText);
+                                InCat.changeInCat(chatId,this.tempWhat , inputText);
+                            } catch (SQLException e) {
+                                log.error("SQL error " +e.getMessage() );
+                                e.printStackTrace();
+                            }
+                            User.setServiceDelete(chatId , 0);
+                            User.setServiceWhat(chatId , 0);
+                            User.setServiceChange(chatId , 0);
+                            SendMessage sendMessage = Bot.doSendMsg(chatId,"changed");
+                            Buttons.setButtonsMain(sendMessage,chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
+                        if (serviceWhat == 2)
+                        {
+                            try {
+                                System.out.println("v tempe seychas " + this.tempWhat);
+                                System.out.println("v inpute seychas " + inputText);
+
+                                OutCat.changeOutCat(chatId,this.tempWhat , inputText);
+                            } catch (SQLException e) {
+                                log.error("SQL error " +e.getMessage() );
+                                e.printStackTrace();
+                            }
+                            User.setServiceDelete(chatId , 0);
+                            User.setServiceWhat(chatId , 0);
+                            User.setServiceChange(chatId , 0);
+                            SendMessage sendMessage = Bot.doSendMsg(chatId,"changed");
+                            Buttons.setButtonsMain(sendMessage,chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
+                    }
+
+                    /**
+                     *   "changed": "Категория изменина!",
+                     *         "deleted": "Категория удалина!"
+                     *
+                     */
+
+
+                    int serviceDelete = User.getServiceDelete(chatId);
+                    if (serviceDelete == 1)
+                    {
+                        User.setServiceDelete(chatId , 0);
+                        int serviceWhat = User.getServiceWhat(chatId);
+
+                        if (serviceWhat == 1)
+                        {
+                            try {
+                                InCat.deleteInCat(chatId , inputText);
+                            } catch (SQLException e) {
+                                log.error("SQL error " +e.getMessage() );
+                                e.printStackTrace();
+                            }
+                            User.setServiceWhat(chatId , 0);
+                            User.setServiceChange(chatId , 0);
+                            SendMessage sendMessage = Bot.doSendMsg(chatId,"deleted");
+                            Buttons.setButtonsMain(sendMessage,chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
+                        if (serviceWhat == 2)
+                        {
+                            try {
+                               OutCat.deleteOutCat(chatId,inputText);
+                              }
+                            catch (SQLException e)
+                            {
+                                log.error("SQL error " +e.getMessage() );
+                                e.printStackTrace();
+                            }
+                            User.setServiceWhat(chatId , 0);
+                            User.setServiceChange(chatId , 0);
+                            SendMessage sendMessage = Bot.doSendMsg(chatId,"deleted");
+                            Buttons.setButtonsMain(sendMessage,chatId);
+                            bot.sendQueue.add(sendMessage);
+                        }
+                        //User.setServiceDelete(chatId , 0);
+
+                    }
 
 
 
@@ -260,59 +365,7 @@ public class MessageReciever implements Runnable {
                     ChangeLimitsHandler changeLimitsHandler = new ChangeLimitsHandler(bot);
                     changeLimitsHandler.operate(chatId,update);
                 }
-                else if (calBack.equals("incomeCats"))
-                {
-                    /**
-                     * показать все категории дохода
-                     */
-                    SendMessage sendMessage = Bot.doSendMsg(chatId,"listCat");
-                    bot.sendQueue.add(sendMessage);
-                    ArrayList list = new ArrayList();
-                    try {
-                         list = InCat.getAllInCats(chatId);
-                    } catch (SQLException e) {
-                        log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
-                        return;
-                    }
-                    StringBuilder s = new StringBuilder();
-                    for (Object string: list) {
-                        s.append(string).append("\n");
-                    }
 
-                    SendMessage sendMessage1 = new SendMessage();
-                    sendMessage1.setChatId(chatId);
-                    sendMessage1.setText(s.toString());
-                    bot.sendQueue.add(sendMessage1);
-
-
-                    /**
-                     * вот здесь делать
-                     */
-                }
-                else if (calBack.equals("spanCats"))
-                {
-                    /**
-                     * показать все категоии разхода
-                     */
-                    SendMessage sendMessage = Bot.doSendMsg(chatId,"listCat");
-                    bot.sendQueue.add(sendMessage);
-                    ArrayList list = new ArrayList();
-                    try {
-                        list = OutCat.getAllInCats(chatId);
-                    } catch (SQLException e) {
-                        log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
-                        return;
-                    }
-                    StringBuilder s = new StringBuilder();
-                    for (Object string: list) {
-                        s.append(string).append("\n");
-                    }
-
-                    SendMessage sendMessage1 = new SendMessage();
-                    sendMessage1.setChatId(chatId);
-                    sendMessage1.setText(s.toString());
-                    bot.sendQueue.add(sendMessage1);
-                }
                 else if (calBack.equals("span"))
                 {
                     try {
@@ -372,9 +425,92 @@ public class MessageReciever implements Runnable {
                 {
                     SendMessage sendMessage = Bot.doSendMsg(chatId,"cancelMsg");
                     Buttons.setButtonsMain(sendMessage,chatId);
+                    User.setServiceDelete(chatId , 0);
+                    User.setServiceWhat(chatId , 0);
+                    User.setServiceChange(chatId , 0);
                     bot.sendQueue.add(sendMessage);
                     kostyl1 = "";
                     kostyl2 = 0;
+                }
+/**
+ * вот от сюда новое
+ */
+                else if (calBack.equals("incomeCats"))
+                {
+                    /**
+                     * показать все категории дохода
+                     */
+                    SendMessage sendMessage = Bot.doSendMsg(chatId,"listCat");
+                    bot.sendQueue.add(sendMessage);
+                    ArrayList list = new ArrayList();
+                    try {
+                        list = InCat.getAllInCats(chatId);
+                    } catch (SQLException e) {
+                        log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
+                        return;
+                    }
+
+                    StringBuilder s = new StringBuilder();
+                    for (Object o :list) {
+                        s.append(o.toString()).append("\n");
+                    }
+
+                    SendMessage sendMessage1 = new SendMessage();
+                    sendMessage1.setChatId(chatId);
+                    sendMessage1.setText(s.toString());
+                    Buttons.setInlineKeyBoardChangeDelete(sendMessage1,chatId);
+                    bot.sendQueue.add(sendMessage1);
+                    //Buttons.setKeyBoardCategoriesNewTest(sendMessage , chatId , list , bot);
+                    User.setServiceWhat(chatId , 1);
+
+                }
+                else if (calBack.equals("spanCats"))
+                {
+                    /**
+                     * показать все категоии разхода
+                     */
+                    SendMessage sendMessage = Bot.doSendMsg(chatId,"listCat");
+                    bot.sendQueue.add(sendMessage);
+                    ArrayList list;
+                    try {
+                        list = OutCat.getAllOutCats(chatId);
+                    } catch (SQLException e) {
+                        log.error("SQL error in getAllInCats !!! "+ e.getLocalizedMessage());
+                        return;
+                    }
+
+                    StringBuilder s = new StringBuilder();
+                    for (Object o :list) {
+                        s.append(o.toString()).append("\n");
+                    }
+
+                    SendMessage sendMessage1 = new SendMessage();
+                    sendMessage1.setChatId(chatId);
+                    sendMessage1.setText(s.toString());
+                    Buttons.setInlineKeyBoardChangeDelete(sendMessage1,chatId);
+                    bot.sendQueue.add(sendMessage1);
+
+                    User.setServiceWhat(chatId , 2);
+                    //Buttons.setKeyBoardCategoriesNewTest(sendMessage , chatId , list , bot);
+
+                }
+                else if (calBack.equals("changeDeleteHandler"))
+                {
+                    ChangeDeleteHandler changeDeleteHandler = new ChangeDeleteHandler(bot);
+                    changeDeleteHandler.operate(chatId,update);
+                }
+                else if (calBack.equals("changeCat"))
+                {
+                    int service = User.getServiceWhat(chatId);
+                    ChangeDeleteHandler changeDeleteHandler = new ChangeDeleteHandler(bot);
+                    changeDeleteHandler.operateChange(chatId , service);
+
+                }
+                else if (calBack.equals("deleteCat"))
+                {
+                    int service = User.getServiceWhat(chatId);
+                    ChangeDeleteHandler changeDeleteHandler = new ChangeDeleteHandler(bot);
+                    changeDeleteHandler.operateDelete(chatId , service);
                 }
 
 

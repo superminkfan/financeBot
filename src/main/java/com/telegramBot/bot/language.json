@@ -65,7 +65,17 @@
 
         "dayHandlerMsg1": " Display a list of income / expenses per day",
         "monthHandlerMsg1": " Display a list of income / expenses per month",
-        "yearHandlerMsg1": " Display a list of income / expenses per year"
+        "yearHandlerMsg1": " Display a list of income / expenses per year",
+
+        "ChangeDeleteHandler": "What do you want from me, bitch?!",
+        "changeDel1": "Change",
+        "changeDel2": "Delete",
+
+        "operateOnDelete": "Choose category for delete",
+        "operateOnChange" : "Choose category for change",
+        "goChange": "Enter new name",
+        "changed": "Category changed!",
+        "deleted": "Category deleted!"
 
 
     } ,
@@ -135,9 +145,17 @@
 
         "dayHandlerMsg1": " Вывод списка доходов/расходов за день",
         "monthHandlerMsg1": " Вывод списка доходов/расходов за месяц",
-        "yearHandlerMsg1": " Вывод списка доходов/расходов за год"
+        "yearHandlerMsg1": " Вывод списка доходов/расходов за год",
+        "ChangeDeleteHandler": "Что сделать с этой категорией?",
 
+        "changeDel1": "Изменить",
+        "changeDel2": "Удалить",
 
+        "operateOnDelete": "Выберите категорию на удаление",
+        "operateOnChange" : "Выберите категорию на изменение",
+        "goChange": "Введите новое название",
+        "changed": "Категория изменина!",
+        "deleted": "Категория удалина!"
 
 
 

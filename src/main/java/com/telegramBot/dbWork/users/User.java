@@ -228,5 +228,175 @@ public class User {
         return i+1;
     }
 
+//--------------------------------------------------------------------
+    public static void setServiceChange(Long chatId , int service)
+    {
+        try {
+            Conn.connect();
+        } catch (SQLException e) {
+            log.error("Sql error in  setServiceChange()" + e.getMessage());
+        }
+        catch (ClassNotFoundException e)
+        {
+            log.error("No class found!" + e.getLocalizedMessage());
+        }
+
+        log.info("Executing update statmt for setServiceChange...");
+        try {
+            Conn.statmt.execute("UPDATE users SET serviceChange = "  + service + " where chatid =  " + chatId + ";");
+        } catch (SQLException e) {
+            log.error("Error in execute setServiceChange!"  + e.getLocalizedMessage());
+        }
+
+        try {
+            Conn.CloseDB();
+        } catch (ClassNotFoundException e) {
+            log.error("Class not found! " +  e.getLocalizedMessage());
+        } catch (SQLException e) {
+            log.error("Error closing db connection " +  e.getLocalizedMessage());
+        }
+
+    }
+
+    public static int getServiceChange(Long chatId)
+    {
+        Integer service = 0;
+        log.info("Executing select statmt for getServiceChange for users table...");
+
+        try {
+            Conn.connect();
+            ResultSet resSet = null;
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM users WHERE chatId = " + chatId + ";");
+
+            if (resSet.isClosed()) {
+                log.warn("result set is empty, thats odd");
+                return -1;
+            }
+            service = resSet.getInt("serviceChange");
+
+            Conn.CloseDB();
+        } catch (SQLException e) {
+            log.error("SQL exeptrion in getServiceChange()! " + e.getLocalizedMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return service;
+    }
+
+    public static void setServiceDelete(Long chatId , int service)
+    {
+        try {
+            Conn.connect();
+        } catch (SQLException e) {
+            log.error("Sql error in  setServiceDelete()" + e.getMessage());
+        }
+        catch (ClassNotFoundException e)
+        {
+            log.error("No class found!" + e.getLocalizedMessage());
+        }
+
+        log.info("Executing update statmt for setServiceDelete...");
+        try {
+            Conn.statmt.execute("UPDATE users SET serviceDelete = "  + service + " where chatid =  " + chatId + ";");
+        } catch (SQLException e) {
+            log.error("Error in execute setServiceDelete!"  + e.getLocalizedMessage());
+        }
+
+        try {
+            Conn.CloseDB();
+        } catch (ClassNotFoundException e) {
+            log.error("Class not found! " +  e.getLocalizedMessage());
+        } catch (SQLException e) {
+            log.error("Error closing db connection " +  e.getLocalizedMessage());
+        }
+
+    }
+
+    public static int getServiceDelete(Long chatId)
+    {
+        Integer service = 0;
+        log.info("Executing select statmt for getServiceDelete for users table...");
+
+        try {
+            Conn.connect();
+            ResultSet resSet = null;
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM users WHERE chatId = " + chatId + ";");
+
+            if (resSet.isClosed()) {
+                log.warn("result set is empty, thats odd");
+                return -1;
+            }
+            service = resSet.getInt("serviceDelete");
+
+            Conn.CloseDB();
+        } catch (SQLException e) {
+            log.error("SQL exeptrion in getServiceDelete()! " + e.getLocalizedMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return service;
+    }
+
+    public static void setServiceWhat(Long chatId , int service)
+    {
+        try {
+            Conn.connect();
+        } catch (SQLException e) {
+            log.error("Sql error in  setServiceWhat()" + e.getMessage());
+        }
+        catch (ClassNotFoundException e)
+        {
+            log.error("No class found!" + e.getLocalizedMessage());
+        }
+
+        log.info("Executing update statmt for setServiceWhat...");
+        try {
+            Conn.statmt.execute("UPDATE users SET serviceWhat = "  + service + " where chatid =  " + chatId + ";");
+        } catch (SQLException e) {
+            log.error("Error in execute setServiceWhat!"  + e.getLocalizedMessage());
+        }
+
+        try {
+            Conn.CloseDB();
+        } catch (ClassNotFoundException e) {
+            log.error("Class not found! " +  e.getLocalizedMessage());
+        } catch (SQLException e) {
+            log.error("Error closing db connection " +  e.getLocalizedMessage());
+        }
+
+    }
+
+    public static int getServiceWhat(Long chatId)
+    {
+        Integer service = 0;
+        log.info("Executing select statmt for getServiceWhat for users table...");
+
+        try {
+            Conn.connect();
+            ResultSet resSet = null;
+            resSet = Conn.statmt.executeQuery(
+                    "SELECT * FROM users WHERE chatId = " + chatId + ";");
+
+            if (resSet.isClosed()) {
+                log.warn("result set is empty, thats odd");
+                return -1;
+            }
+            service = resSet.getInt("serviceWhat");
+
+            Conn.CloseDB();
+        } catch (SQLException e) {
+            log.error("SQL exeptrion in getServiceWhat()! " + e.getLocalizedMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return service;
+    }
+
+
 
 }

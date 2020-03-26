@@ -60,6 +60,7 @@ public class Buttons {
         replyKeyboardMarkup.setSelective(true);
         replyKeyboardMarkup.setResizeKeyboard(true);
         replyKeyboardMarkup.setOneTimeKeyboard(false);
+
         List<KeyboardRow> keyboardRowList = new ArrayList<>();
         KeyboardRow keyboardFirstRow = new KeyboardRow();
         KeyboardRow keyboardSecondRow = new KeyboardRow();
@@ -170,6 +171,72 @@ public class Buttons {
         keyboardButtonsRow1.add(inlineKeyboardButton2);
         keyboardButtonsRow1.add(inlineKeyboardButton3);
         keyboardButtonsRow2.add(inlineKeyboardButton1);
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+        rowList.add(keyboardButtonsRow1);
+        rowList.add(keyboardButtonsRow2);
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+    }
+
+    public static void setInlineKeyBoardCategoriesNew(SendMessage sendMessage , Long chatId ,ArrayList list , Bot bot) {
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        int size = list.size();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        for (int i = 0 ; i < size ; i ++)
+        {
+            List<InlineKeyboardButton> keyboardButtonsRow = new ArrayList<>();
+            InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
+            inlineKeyboardButton.setText(list.get(i).toString());
+
+            inlineKeyboardButton.setCallbackData("changeDeleteHandler");
+            keyboardButtonsRow.add(inlineKeyboardButton);
+            rowList.add(keyboardButtonsRow);
+        }
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+    }
+
+    public static void setKeyBoardCategoriesNewTest(SendMessage sendMessage , Long chatId,ArrayList list ,Bot bot) {
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        replyKeyboardMarkup.setSelective(true);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        replyKeyboardMarkup.setOneTimeKeyboard(true);
+        List<KeyboardRow> keyboardRowList = new ArrayList<>();
+        int size = list.size();
+
+        for (int i = 0 ; i < size ; i ++)
+        {
+            KeyboardRow keyboardRow = new KeyboardRow();
+            keyboardRow.add(list.get(i).toString());
+
+            keyboardRowList.add(keyboardRow);
+        }
+
+        replyKeyboardMarkup.setKeyboard(keyboardRowList);
+
+    }
+
+    public static void setInlineKeyBoardChangeDelete(SendMessage sendMessage , Long chatId) {
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
+        InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
+        InlineKeyboardButton inlineKeyboardButton3 = new InlineKeyboardButton();
+        String lang = User.getLanguage(chatId);
+        inlineKeyboardButton1.setText(Bot.getFastMsg(lang,"changeDel1"));
+        inlineKeyboardButton1.setCallbackData("changeCat");
+        inlineKeyboardButton2.setText(Bot.getFastMsg(lang,"changeDel2"));
+        inlineKeyboardButton2.setCallbackData("deleteCat");
+        inlineKeyboardButton3.setText(Bot.getFastMsg(lang,"catMsg3"));
+        inlineKeyboardButton3.setCallbackData("cancel");
+        List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
+        List<InlineKeyboardButton> keyboardButtonsRow2 = new ArrayList<>();
+        keyboardButtonsRow1.add(inlineKeyboardButton1);
+        keyboardButtonsRow1.add(inlineKeyboardButton2);
+        keyboardButtonsRow2.add(inlineKeyboardButton3);
         List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
         rowList.add(keyboardButtonsRow1);
         rowList.add(keyboardButtonsRow2);

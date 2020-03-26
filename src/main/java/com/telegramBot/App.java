@@ -23,11 +23,6 @@ public class App {
     private static String BOT_NAME = "financeTOGUbot";
     private static String BOT_TOKEN = "958126512:AAGvd4troi3MmLlnUOReujPOKJAs8NgMPlM" /* your bot's token here */;
 
-    private static String PROXY_HOST = "193.70.81.255" /* proxy host */;
-    private static Integer PROXY_PORT = 4854 /* proxy port */;
-    private static String PROXY_USER = "elrid" /* proxy user */;
-    private static String PROXY_PASSWORD = "Hf,jnf999" /* proxy password */;
-
     public static void main(String[] args) {
         ApiContextInitializer.init();
 
