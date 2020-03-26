@@ -1,6 +1,7 @@
 package com.telegramBot.dbWork.heap;
 
 import com.telegramBot.dbWork.Conn;
+import com.telegramBot.dbWork.users.User;
 import org.apache.log4j.Logger;
 
 import java.sql.ResultSet;
@@ -105,7 +106,12 @@ public class HeapWork {
                 arrayList.add("none");
                 //return hashMap;
             } else {
-                arrayList.add("Категория   ---   Цена");
+
+                String lang = User.getLanguage(chatId);
+                if (lang.equals("russian"))
+                    arrayList.add("Категория   ---   Цена");
+                else
+                    arrayList.add("Category   ---   price");
 
 
                 while (resSet.next()) {
@@ -116,7 +122,7 @@ public class HeapWork {
                     if (!yesterday.after(date) && !now.before(date)) {//все записи за день
                         float temp = resSet.getFloat("amount");
                         String nameCat = resSet.getString("nameCat");
-                        arrayList.add("" + nameCat + "---" + temp);
+                        arrayList.add("" + nameCat + "   ---   " + temp);
 
                     }
                 }
