@@ -53,23 +53,79 @@ public class SystemHandler extends AbstractHandler {
         }
 
 
+        StringBuilder s = new StringBuilder();
+        String firstName = null;
+        String lastName = null;
+        String userName = null;
+        try {
+            firstName = update.getMessage().getChat().getFirstName();
+            System.out.println(firstName);
+        }
+        catch (NullPointerException e)
+        {
+            log.error("popalas` nullpointerEx firstName " + e.getMessage());
+
+        }
+        try {
+            lastName = update.getMessage().getChat().getLastName();
+            System.out.println(lastName);
+        }
+        catch (NullPointerException e)
+        {
+            log.error("popalas` nullpointerEx lastName " + e.getMessage());
+        }
+
+        try {
+            userName = update.getMessage().getChat().getUserName();
+            System.out.println(userName);
+        }
+        catch (NullPointerException e)
+        {
+            log.error("popalas` nullpointerEx userName " + e.getMessage());
+        }
+
+        String text = "";
 
 
-              SendMessage firstMsg = new SendMessage();
-              firstMsg.setChatId(chatId);
-              firstMsg.setText("Добро пожаловать " +
-                        update.getMessage().getChat().getFirstName() + " " +
-                        update.getMessage().getChat().getLastName() +  " 🤗");
+        if (firstName == null && lastName == null && userName == null)
+        {
+            text = "";
+            goWat(chatId , text);
+            return "";
+        }
 
-              bot.sendQueue.add(firstMsg);
+        if (firstName != null && lastName != null)
+        {
+            text = firstName + " " + lastName;
+            goWat(chatId , text);
+            return "";
+        }
+        else if (firstName != null)
+        {
+            text = firstName;
+            goWat(chatId , text);
+            return "";
+        }
+        else if (lastName != null)
+        {
+            text = lastName;
+            goWat(chatId , text);
+            return "";
+        }
 
-              SendMessage sendMessage = Bot.doSendMsg(chatId,"startMsg");
 
-              Buttons.setButtonsMain(sendMessage , chatId);
-              bot.sendQueue.add(sendMessage);
-
-
-        return "";
+return "";
     }
+
+    public void goWat(Long chatId, String text) {
+        SendMessage firstMsg = new SendMessage();
+        firstMsg.setChatId(chatId);
+        firstMsg.setText("Добро пожаловать " + text +  " 🤗");
+        bot.sendQueue.add(firstMsg);
+        SendMessage sendMessage = Bot.doSendMsg(chatId,"startMsg");
+        Buttons.setButtonsMain(sendMessage , chatId);
+        bot.sendQueue.add(sendMessage);
+    }
+
 
 }
